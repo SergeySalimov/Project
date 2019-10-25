@@ -1,0 +1,36 @@
+{
+  "name": "project_by_salimau_siarhei_jaluzi5",
+  "version": "1.0.0",
+  "description": "Project by Salimau Siarhei: Jaluzi5",
+  "main": "index.js",
+  "scripts": {
+    "css": "node-sass src/styles.scss -o dist",
+    "css:watch": "npm run css && node-sass src/styles.scss -wo dist",
+    "css:prod": "node-sass src/styles.scss -o dist --output-style compressed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergeySalimov/Project.git"
+  },
+  "keywords": [
+    "Jaluzi5",
+    "jaluzi5",
+    "jaluzi",
+    "Jaluzi",
+    "жалюзи",
+    "рольшторы"
+  ],
+  "author": "Sergey Salimau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SergeySalimov/Project/issues"
+  },
+  "homepage": "https://github.com/SergeySalimov/Project#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
