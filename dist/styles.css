@@ -7019,3 +7019,60 @@ a.text-dark:hover, a.text-dark:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
+
+header {
+  background: url("../img/header-bg.jpg");
+  background-size: cover;
+  padding: 15px 0;
+  color: #000; }
+  header a {
+    color: #000; }
+    header a:hover {
+      text-decoration: none; }
+  header .logo {
+    display: block;
+    text-align: center; }
+    @media (min-width: 576px) {
+      header .logo {
+        text-align: left; } }
+    header .logo a {
+      font-size: 30px;
+      font-weight: 600; }
+      header .logo a:hover {
+        color: #000; }
+    header .logo span {
+      vertical-align: middle; }
+    header .logo p {
+      width: 100%;
+      font-size: 8px;
+      font-weight: 400; }
+      @media (min-width: 768px) {
+        header .logo p {
+          font-size: 10px; } }
+  header .get-a-call {
+    display: block;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 0; }
+    @media (min-width: 576px) {
+      header .get-a-call {
+        padding-top: 36px; } }
+    header .get-a-call a:hover {
+      color: #ffac00; }
+  header .contact-information {
+    display: block;
+    text-align: center; }
+    @media (min-width: 576px) {
+      header .contact-information {
+        text-align: end; } }
+    header .contact-information p {
+      font-size: 11px;
+      margin-top: 8px;
+      margin-bottom: 0; }
+    header .contact-information a {
+      font-weight: bold;
+      font-size: 14px; }
+      header .contact-information a:hover {
+        color: #ffac00; }
