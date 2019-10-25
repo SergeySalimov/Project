@@ -4,6 +4,9 @@ $mainFontColor: #000;
 $mainFontColor2: #ffac00;
 $smallFontSizeMd: 10px;
 $smallFontSizeSm: 8px;
+$bigFontSizeXs: 30px;
+$bigFontSizeSm: 40px;
+$bigFontSizeMd: 50px;
 $mediumFontSize: 14px;
 
 //$linkFontSize: 17px;
@@ -20,99 +23,121 @@ $mediumFontSize: 14px;
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // Верстка Mobile First: XS - телефон, SM - планшет, MD - монитор
-header {
+.first-section {
   // Common properties
   background: url('../img/header-bg.jpg');
   background-size: cover;
   padding: $basePaddingTop 0;
   color: $mainFontColor;
-
-
-  // properties for all <a> in header
-  a {
-    color: $mainFontColor;
-    &:hover {
-      text-decoration: none;
-    }
-  }
-  // Logo block properties
-  .logo {
-    display: block;
-    text-align: center;
-    @media (min-width: map-get($grid-breakpoints, "sm")) {
-      text-align: left;
-    }
+  header {
+    // properties for all <a> in header
     a {
-      font-size: 30px;
-      font-weight: 600;
+      color: $mainFontColor;
       &:hover {
-        color: $mainFontColor;
+        text-decoration: none;
       }
     }
-    span {
-      vertical-align: middle;
-    }
-    p {
-      width: 100%;
-      font-size: $smallFontSizeSm;
-      @media (min-width: map-get($grid-breakpoints, "md")) {
-        font-size: $smallFontSizeMd;
+    // Logo block properties
+    .logo {
+      display: block;
+      text-align: center;
+      @media (min-width: map-get($grid-breakpoints, "sm")) {
+        text-align: left;
       }
+      a {
+        font-size: 30px;
+        font-weight: 600;
+        &:hover {
+          color: $mainFontColor;
+        }
+      }
+      span {
+        vertical-align: middle;
+      }
+      p {
+        //width: 100%;
+        font-size: $smallFontSizeSm;
+        @media (min-width: map-get($grid-breakpoints, "md")) {
+          font-size: $smallFontSizeMd;
+        }
+        font-weight: 400;
+      }
+    }
+    // Get a call block properties
+    .get-a-call {
+      display: block;
+      text-transform: uppercase;
+      font-size: $mediumFontSize;
       font-weight: 400;
+      text-align: center;
+      padding-top: 0;
+      @media (min-width: map-get($grid-breakpoints, "sm")) {
+        padding-top: $basePaddingTopSmAndMd;
+      }
+      a {
+        &:hover {
+          color: $mainFontColor2;
+        }
+      }
+    }
+    // Contact information block properies
+    .contact-information {
+      display: block;
+      text-align: center;
+      @media (min-width: map-get($grid-breakpoints, "sm")) {
+        text-align: end;
+      }
+      p {
+        font-size: $smallFontSizeMd+1;
+        margin-top: 8px;
+        margin-bottom: 0;
+      }
+      a {
+        font-weight: bold;
+        font-size: $mediumFontSize;
+        &:hover {
+          color: $mainFontColor2;
+        }
+      }
     }
   }
-  // Get a call block properties
-  .get-a-call {
-    display: block;
-    text-transform: uppercase;
-    font-size: $mediumFontSize;
-    font-weight: 400;
-    text-align: center;
-    padding-top: 0;
+  main {
+    padding-top: $basePaddingTop;
     @media (min-width: map-get($grid-breakpoints, "sm")) {
       padding-top: $basePaddingTopSmAndMd;
     }
-    a {
-      &:hover {
-        color: $mainFontColor2;
-      }
-    }
-  }
-  // Contact information block properies
-  .contact-information {
-    display: block;
-    text-align: center;
-    @media (min-width: map-get($grid-breakpoints, "sm")) {
-      text-align: end;
-    }
-    p {
-      font-size: $smallFontSizeMd+1;
-      margin-top: 8px;
-      margin-bottom: 0;
-    }
-    a {
-      font-weight: bold;
-      font-size: $mediumFontSize;
-      &:hover {
-        color: $mainFontColor2;
-      }
-    }
-  }
 
+    h1 {
+      display: block;
+      line-height: 1.1;
+      text-align: center;
+      font-size: $bigFontSizeXs;
+      @media (min-width: map-get($grid-breakpoints, "sm")) {
+        font-size: $bigFontSizeSm;
+      }
+      @media (min-width: map-get($grid-breakpoints, "md")) {
+        font-size: $bigFontSizeMd;
+      }
+    }
+
+  }
 }
 
 // media for sm+md
 @media (min-width: map-get($grid-breakpoints, "sm")) {
 
 }
+
 // media for md
 @media (min-width: map-get($grid-breakpoints, "md")) {
 
 }
+
 // media for sm
 @media (min-width: map-get($grid-breakpoints, "sm")) and (max-width: map-get($grid-breakpoints, "md")) {
 
 }
+
 //.top-big-pad {
 //  padding-top: $bigPadSm;
 //  @media (min-width: map-get($grid-breakpoints, "md")) {

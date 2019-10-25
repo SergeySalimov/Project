@@ -7020,36 +7020,35 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
-header {
+.first-section {
   background: url("../img/header-bg.jpg");
   background-size: cover;
   padding: 15px 0;
   color: #000; }
-  header a {
+  .first-section header a {
     color: #000; }
-    header a:hover {
+    .first-section header a:hover {
       text-decoration: none; }
-  header .logo {
+  .first-section header .logo {
     display: block;
     text-align: center; }
     @media (min-width: 576px) {
-      header .logo {
+      .first-section header .logo {
         text-align: left; } }
-    header .logo a {
+    .first-section header .logo a {
       font-size: 30px;
       font-weight: 600; }
-      header .logo a:hover {
+      .first-section header .logo a:hover {
         color: #000; }
-    header .logo span {
+    .first-section header .logo span {
       vertical-align: middle; }
-    header .logo p {
-      width: 100%;
+    .first-section header .logo p {
       font-size: 8px;
       font-weight: 400; }
       @media (min-width: 768px) {
-        header .logo p {
+        .first-section header .logo p {
           font-size: 10px; } }
-  header .get-a-call {
+  .first-section header .get-a-call {
     display: block;
     text-transform: uppercase;
     font-size: 14px;
@@ -7057,22 +7056,38 @@ header {
     text-align: center;
     padding-top: 0; }
     @media (min-width: 576px) {
-      header .get-a-call {
+      .first-section header .get-a-call {
         padding-top: 36px; } }
-    header .get-a-call a:hover {
+    .first-section header .get-a-call a:hover {
       color: #ffac00; }
-  header .contact-information {
+  .first-section header .contact-information {
     display: block;
     text-align: center; }
     @media (min-width: 576px) {
-      header .contact-information {
+      .first-section header .contact-information {
         text-align: end; } }
-    header .contact-information p {
+    .first-section header .contact-information p {
       font-size: 11px;
       margin-top: 8px;
       margin-bottom: 0; }
-    header .contact-information a {
+    .first-section header .contact-information a {
       font-weight: bold;
       font-size: 14px; }
-      header .contact-information a:hover {
+      .first-section header .contact-information a:hover {
         color: #ffac00; }
+  .first-section main {
+    padding-top: 15px; }
+    @media (min-width: 576px) {
+      .first-section main {
+        padding-top: 36px; } }
+    .first-section main h1 {
+      display: block;
+      line-height: 1.1;
+      text-align: center;
+      font-size: 30px; }
+      @media (min-width: 576px) {
+        .first-section main h1 {
+          font-size: 40px; } }
+      @media (min-width: 768px) {
+        .first-section main h1 {
+          font-size: 50px; } }
