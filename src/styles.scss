@@ -4,10 +4,11 @@ $mainFontColor: #000;
 $mainFontColor2: #ffac00;
 $smallFontSizeMd: 10px;
 $smallFontSizeSm: 8px;
-$bigFontSizeXs: 30px;
-$bigFontSizeSm: 40px;
-$bigFontSizeMd: 50px;
+$bigFontSizeXs: 23px;
+$bigFontSizeSm: 33px;
+$bigFontSizeMd: 45px;
 $mediumFontSize: 14px;
+$mediumFontSizeXs: 10px;
 
 //$linkFontSize: 17px;
 //$formFontSize: 11px;
@@ -102,15 +103,17 @@ $mediumFontSize: 14px;
     }
   }
   main {
-    padding-top: $basePaddingTop;
+    padding-top: 3px;
     @media (min-width: map-get($grid-breakpoints, "sm")) {
       padding-top: $basePaddingTopSmAndMd;
     }
-
     h1 {
       display: block;
-      line-height: 1.1;
-      text-align: center;
+      line-height: 1.2;
+      //text-align: center;
+      //@media (min-width: map-get($grid-breakpoints, "sm")) {
+      //  text-align: left;
+      //}
       font-size: $bigFontSizeXs;
       @media (min-width: map-get($grid-breakpoints, "sm")) {
         font-size: $bigFontSizeSm;
@@ -118,25 +121,65 @@ $mediumFontSize: 14px;
       @media (min-width: map-get($grid-breakpoints, "md")) {
         font-size: $bigFontSizeMd;
       }
+      font-weight: 400;
+      border-left: 18px solid transparent;
+      border-image: url("../img/h1.png");
+      border-image-slice: 29;
+      border-image-repeat: round;
+      span {
+        font-size: $bigFontSizeXs - 8;
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+          font-size: $bigFontSizeSm - 8;
+        }
+        @media (min-width: map-get($grid-breakpoints, "md")) {
+          font-size: $bigFontSizeMd - 8;
+        }
+        padding-left: 20px;
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+          padding-left: 50px;
+        }
+      }
+    }
+    p {
+      font-size: $mediumFontSizeXs;
+      @media (min-width: map-get($grid-breakpoints, "sm")) {
+        font-size: $mediumFontSize;
+        padding-top: $basePaddingTop;
+      }
+    }
+    .header-link-bottom {
+      display: none;
+      @media (min-width: map-get($grid-breakpoints, "sm")) {
+        display: block;
+      }
+      //transform: rotate(-90deg);
+
     }
 
+    .header-section-form {
+      text-align: center;
+      @media (min-width: map-get($grid-breakpoints, "sm")) {
+        text-align: right;
+      }
+
+    }
   }
 }
 
-// media for sm+md
-@media (min-width: map-get($grid-breakpoints, "sm")) {
+  // media for sm+md
+  @media (min-width: map-get($grid-breakpoints, "sm")) {
 
-}
+  }
 
-// media for md
-@media (min-width: map-get($grid-breakpoints, "md")) {
+  // media for md
+  @media (min-width: map-get($grid-breakpoints, "md")) {
 
-}
+  }
 
-// media for sm
-@media (min-width: map-get($grid-breakpoints, "sm")) and (max-width: map-get($grid-breakpoints, "md")) {
+  // media for sm
+  @media (min-width: map-get($grid-breakpoints, "sm")) and (max-width: map-get($grid-breakpoints, "md")) {
 
-}
+  }
 
 //.top-big-pad {
 //  padding-top: $bigPadSm;
