@@ -7057,7 +7057,7 @@ a.text-dark:hover, a.text-dark:focus {
     padding-top: 0; }
     @media (min-width: 576px) {
       .first-section header .get-a-call {
-        padding-top: 36px; } }
+        padding-top: 28px; } }
     .first-section header .get-a-call a:hover {
       color: #ffac00; }
   .first-section header .contact-information {
@@ -7079,7 +7079,7 @@ a.text-dark:hover, a.text-dark:focus {
     padding-top: 3px; }
     @media (min-width: 576px) {
       .first-section main {
-        padding-top: 36px; } }
+        padding-top: 28px; } }
     .first-section main h1 {
       display: block;
       line-height: 1.2;
@@ -7109,7 +7109,7 @@ a.text-dark:hover, a.text-dark:focus {
             padding-left: 50px; } }
     .first-section main p {
       font-size: 10px; }
-      @media (min-width: 576px) {
+      @media (min-width: 992px) {
         .first-section main p {
           font-size: 14px;
           padding-top: 15px; } }

@@ -1,5 +1,5 @@
 $basePaddingTop: 15px;
-$basePaddingTopSmAndMd: 36px;
+$basePaddingTopSmAndMd: 28px;
 $mainFontColor: #000;
 $mainFontColor2: #ffac00;
 $smallFontSizeMd: 10px;
@@ -142,7 +142,7 @@ $mediumFontSizeXs: 10px;
     }
     p {
       font-size: $mediumFontSizeXs;
-      @media (min-width: map-get($grid-breakpoints, "sm")) {
+      @media (min-width: map-get($grid-breakpoints, "lg")) {
         font-size: $mediumFontSize;
         padding-top: $basePaddingTop;
       }
