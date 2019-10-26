@@ -7028,7 +7028,11 @@ a.text-dark:hover, a.text-dark:focus {
   .first-section header a {
     color: #000; }
     .first-section header a:hover {
-      text-decoration: none; }
+      text-decoration: none;
+      box-shadow: 0 5px 30px rgba(179, 179, 179, 0.8);
+      background-color: rgba(179, 179, 179, 0.5); }
+    .first-section header a:first-child {
+      display: block; }
   .first-section header .logo {
     display: block;
     text-align: center; }

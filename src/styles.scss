@@ -36,6 +36,11 @@ $mediumFontSizeXs: 10px;
       color: $mainFontColor;
       &:hover {
         text-decoration: none;
+        box-shadow: 0 5px 30px rgba(179, 179, 179, 0.8);
+        background-color: rgba(179, 179, 179, 0.5);
+      }
+      &:first-child {
+        display: block;
       }
     }
     // Logo block properties
