@@ -23,7 +23,7 @@ $mediumFontSizeXs: 10px;
 // Option A: Include all of Bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-// Верстка Mobile First: XS - телефон, SM - планшет, MD - монитор
+// Верстка Mobile First: XS - телефон, SM - планшет - перевернуты телефон, MD - монитор, LG - широкий экран
 .first-section {
   // Common properties
   background: url('../img/header-bg.jpg');
@@ -36,8 +36,8 @@ $mediumFontSizeXs: 10px;
       color: $mainFontColor;
       &:hover {
         text-decoration: none;
-        box-shadow: 0 5px 30px rgba(179, 179, 179, 0.8);
-        background-color: rgba(179, 179, 179, 0.5);
+        //box-shadow: 0 0 5px 5px rgba(179, 179, 179, 0.8);
+        //background-color: rgba(179, 179, 179, 0.5);
       }
       &:first-child {
         display: block;
@@ -71,7 +71,8 @@ $mediumFontSizeXs: 10px;
     }
     // Get a call block properties
     .get-a-call {
-      display: block;
+
+      //display: block;
       text-transform: uppercase;
       font-size: $mediumFontSize;
       font-weight: 400;
