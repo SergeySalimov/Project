@@ -7,8 +7,12 @@ $smallFontSizeSm: 8px;
 $bigFontSizeXs: 23px;
 $bigFontSizeSm: 33px;
 $bigFontSizeMd: 45px;
-$mediumFontSize: 14px;
+$mediumFontSize: 13px;
 $mediumFontSizeXs: 10px;
+$radiusOfPhoneCalling: 10px;
+
+// уменьшить margin
+//$spacer: 0rem;
 
 //$linkFontSize: 17px;
 //$formFontSize: 11px;
@@ -78,12 +82,38 @@ $mediumFontSizeXs: 10px;
       font-weight: 400;
       text-align: center;
       padding-top: 0;
+      vertical-align: middle;
       @media (min-width: map-get($grid-breakpoints, "sm")) {
         padding-top: $basePaddingTopSmAndMd;
       }
       a {
+        svg {
+          width: 25px;
+          height: 25px;
+
+          // hover on <a> && <svg>
+          &:hover {
+            //animation: tel .8s ease-in infinite;
+          }
+        }
         &:hover {
+          svg {
+            box-shadow: 0 0 0 $radiusOfPhoneCalling #ffac00;
+            background: $mainFontColor2;
+            border-radius: 50% 50%;
+            fill: #fff;
+            animation: tel .8s ease-in infinite;
+            @keyframes tel {
+              45% {transform: rotate(-0.1turn)}
+              45% {transform: rotate(0.2turn)}
+            }
+
+          }
           color: $mainFontColor2;
+
+        }
+        span {
+          padding-left: $radiusOfPhoneCalling - 2;
         }
       }
     }
@@ -172,20 +202,20 @@ $mediumFontSizeXs: 10px;
   }
 }
 
-  // media for sm+md
-  @media (min-width: map-get($grid-breakpoints, "sm")) {
+// media for sm+md
+@media (min-width: map-get($grid-breakpoints, "sm")) {
 
-  }
+}
 
-  // media for md
-  @media (min-width: map-get($grid-breakpoints, "md")) {
+// media for md
+@media (min-width: map-get($grid-breakpoints, "md")) {
 
-  }
+}
 
-  // media for sm
-  @media (min-width: map-get($grid-breakpoints, "sm")) and (max-width: map-get($grid-breakpoints, "md")) {
+// media for sm
+@media (min-width: map-get($grid-breakpoints, "sm")) and (max-width: map-get($grid-breakpoints, "md")) {
 
-  }
+}
 
 //.top-big-pad {
 //  padding-top: $bigPadSm;
