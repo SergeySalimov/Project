@@ -7,27 +7,22 @@ $smallFontSizeSm: 8px;
 $bigFontSizeXs: 23px;
 $bigFontSizeSm: 33px;
 $bigFontSizeMd: 45px;
-$mediumFontSize: 13px;
+$mediumFontSize: 14px;
 $mediumFontSizeXs: 10px;
 $radiusOfPhoneCalling: 10px;
 
 // уменьшить margin
 //$spacer: 0rem;
 
-//$linkFontSize: 17px;
-//$formFontSize: 11px;
-//$bigPadMd: 70px;
-//$bigPadSm: 20px;
-
-//$sectionGrey: #c6c8ca;
-
-//$success: #22ffb9;
+@import "fonts";
 
 // Custom.scss
 // Option A: Include all of Bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // Верстка Mobile First: XS - телефон, SM - планшет - перевернуты телефон, MD - монитор, LG - широкий экран
+
+
 .first-section {
   // Common properties
   background: url('../img/header-bg.jpg');
@@ -70,6 +65,7 @@ $radiusOfPhoneCalling: 10px;
         @media (min-width: map-get($grid-breakpoints, "md")) {
           font-size: $smallFontSizeMd;
         }
+
         font-weight: 400;
       }
     }
@@ -87,6 +83,7 @@ $radiusOfPhoneCalling: 10px;
         padding-top: $basePaddingTopSmAndMd;
       }
       a {
+        min-width: 162px;
         svg {
           width: 25px;
           height: 25px;
@@ -157,7 +154,11 @@ $radiusOfPhoneCalling: 10px;
       @media (min-width: map-get($grid-breakpoints, "md")) {
         font-size: $bigFontSizeMd;
       }
+      // old
       font-weight: 400;
+
+
+
       border-left: 18px solid transparent;
       border-image: url("../img/h1.png");
       border-image-slice: 29;
@@ -217,50 +218,7 @@ $radiusOfPhoneCalling: 10px;
 
 }
 
-//.top-big-pad {
-//  padding-top: $bigPadSm;
-//  @media (min-width: map-get($grid-breakpoints, "md")) {
-//    padding-top: $bigPadMd;
-//  }
-//}
-//
-//header {
-//  background: url('../img/header-bg.jpg');
-//  background-size: cover;
-//  padding: $basePadding 0;
-//  color: $mainFontColor;
-//  a {
-//    color: $mainFontColor;
-//    font-size: $linkFontSize;
-//    &:hover {
-//      color: #333;
-//    }
-//  }
-//
-//  h1 {
-//    text-transform: uppercase;
-//  }
-//
-//  p {
-//    margin-bottom: 35px;
-//    line-height: 2rem;
-//  }
-//  @media (min-width: map-get($grid-breakpoints, "md")) {
-//    padding-top: 35px;
-//
-//    .btn-sign {
-//      padding: 0px 16px;
-//      height: 26px;
-//      margin-top: 10px;
-//    }
-//
-//    h1 {
-//      font-weight: bold;
-//      font-size: 3.5rem;
-//    }
-//  }
-//
-//}
+
 //
 //#second {
 //  padding-bottom: $basePadding;
