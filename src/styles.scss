@@ -74,7 +74,6 @@ body {
     }
     // Get a call block properties
     .get-a-call {
-
       //display: block;
       text-transform: uppercase;
       font-size: $mediumFontSize;
@@ -86,14 +85,14 @@ body {
         padding-top: $basePaddingTopSmAndMd;
       }
       a {
-        min-width: 162px;
+        min-width: ($mediumFontSize * 11) + $radiusOfPhoneCalling + 4px ;
         svg {
           width: 25px;
           height: 25px;
 
           // hover on <a> && <svg>
           &:hover {
-            //animation: tel .8s ease-in infinite;
+
           }
         }
         &:hover {
@@ -111,10 +110,8 @@ body {
                 transform: rotate(0.2turn)
               }
             }
-
           }
           color: $mainFontColor2;
-
         }
         span {
           padding-left: $radiusOfPhoneCalling - 2;
