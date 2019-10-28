@@ -32,6 +32,13 @@ body {
   background-size: cover;
   padding: $basePaddingTop 0;
   color: $mainFontColor;
+  #mainNavbar {
+    a {
+      &:first-of-type {
+        font-size: $mediumFontSize + 2;
+      }
+    }
+  }
   header {
     // properties for all <a> in header
     a {
@@ -54,6 +61,7 @@ body {
       }
       a {
         font-size: 30px;
+        min-width: 152px;
         font-weight: 600;
         &:hover {
           color: $mainFontColor;
@@ -85,7 +93,7 @@ body {
         padding-top: $basePaddingTopSmAndMd;
       }
       a {
-        min-width: ($mediumFontSize * 11) + $radiusOfPhoneCalling + 4px ;
+        min-width: ($mediumFontSize * 11) + $radiusOfPhoneCalling + 4px;
         svg {
           width: 25px;
           height: 25px;
@@ -188,11 +196,13 @@ body {
     }
     .header-link-bottom {
       display: none;
+      padding-left: 0px;
       @media (min-width: map-get($grid-breakpoints, "sm")) {
         display: block;
+        padding-top: 130px;
+        padding-left: 27px;
+        transform: rotate(-270deg);
       }
-      //transform: rotate(-90deg);
-
     }
 
     .header-section-form {
