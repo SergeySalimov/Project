@@ -7085,35 +7085,35 @@ body {
   background-size: cover;
   padding: 15px 0;
   color: #000; }
-  .first-section #mainNavbar a:first-of-type {
+  .first-section header #mainNavbar a:first-of-type {
     font-size: 16px; }
-  .first-section header a {
+  .first-section header .header-bottom a {
     color: #000; }
-    .first-section header a:hover {
+    .first-section header .header-bottom a:hover {
       text-decoration: none; }
-    .first-section header a:first-child {
+    .first-section header .header-bottom a:first-child {
       display: block; }
-  .first-section header .logo {
+  .first-section header .header-bottom .logo {
     display: block;
     text-align: center; }
     @media (min-width: 576px) {
-      .first-section header .logo {
+      .first-section header .header-bottom .logo {
         text-align: left; } }
-    .first-section header .logo a {
+    .first-section header .header-bottom .logo a {
       font-size: 30px;
       min-width: 152px;
       font-weight: 600; }
-      .first-section header .logo a:hover {
+      .first-section header .header-bottom .logo a:hover {
         color: #000; }
-    .first-section header .logo span {
+    .first-section header .header-bottom .logo span {
       vertical-align: middle; }
-    .first-section header .logo p {
+    .first-section header .header-bottom .logo p {
       font-size: 9px;
       font-weight: 400; }
       @media (min-width: 768px) {
-        .first-section header .logo p {
+        .first-section header .header-bottom .logo p {
           font-size: 10px; } }
-  .first-section header .get-a-call {
+  .first-section header .header-bottom .get-a-call {
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 400;
@@ -7121,16 +7121,16 @@ body {
     padding-top: 0;
     vertical-align: middle; }
     @media (min-width: 576px) {
-      .first-section header .get-a-call {
+      .first-section header .header-bottom .get-a-call {
         padding-top: 28px; } }
-    .first-section header .get-a-call a {
+    .first-section header .header-bottom .get-a-call a {
       min-width: 168px; }
-      .first-section header .get-a-call a svg {
+      .first-section header .header-bottom .get-a-call a svg {
         width: 25px;
         height: 25px; }
-      .first-section header .get-a-call a:hover {
+      .first-section header .header-bottom .get-a-call a:hover {
         color: #ffac00; }
-        .first-section header .get-a-call a:hover svg {
+        .first-section header .header-bottom .get-a-call a:hover svg {
           box-shadow: 0 0 0 10px #ffac00;
           background: #ffac00;
           border-radius: 50% 50%;
@@ -7142,22 +7142,22 @@ body {
     transform: rotate(-0.1turn); }
   45% {
     transform: rotate(0.2turn); } }
-      .first-section header .get-a-call a span {
+      .first-section header .header-bottom .get-a-call a span {
         padding-left: 8px; }
-  .first-section header .contact-information {
+  .first-section header .header-bottom .contact-information {
     display: block;
     text-align: center; }
     @media (min-width: 576px) {
-      .first-section header .contact-information {
+      .first-section header .header-bottom .contact-information {
         text-align: end; } }
-    .first-section header .contact-information p {
+    .first-section header .header-bottom .contact-information p {
       font-size: 11px;
       margin-top: 8px;
       margin-bottom: 0; }
-    .first-section header .contact-information a {
+    .first-section header .header-bottom .contact-information a {
       font-weight: bold;
       font-size: 14px; }
-      .first-section header .contact-information a:hover {
+      .first-section header .header-bottom .contact-information a:hover {
         color: #ffac00; }
   .first-section main {
     padding-top: 3px; }
@@ -7205,12 +7205,6 @@ body {
     .first-section main .header-link-bottom {
       display: none;
       padding-left: 0px; }
-      @media (min-width: 576px) {
-        .first-section main .header-link-bottom {
-          display: block;
-          padding-top: 130px;
-          padding-left: 27px;
-          transform: rotate(-270deg); } }
     .first-section main .header-section-form {
       text-align: center; }
       @media (min-width: 576px) {

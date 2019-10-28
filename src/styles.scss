@@ -32,117 +32,120 @@ body {
   background-size: cover;
   padding: $basePaddingTop 0;
   color: $mainFontColor;
-  #mainNavbar {
-    a {
-      &:first-of-type {
-        font-size: $mediumFontSize + 2;
-      }
-    }
-  }
+
   header {
-    // properties for all <a> in header
-    a {
-      color: $mainFontColor;
-      &:hover {
-        text-decoration: none;
-        //box-shadow: 0 0 5px 5px rgba(179, 179, 179, 0.8);
-        //background-color: rgba(179, 179, 179, 0.5);
+    #mainNavbar {
+      a {
+        &:first-of-type {
+          font-size: $mediumFontSize + 2;
+        }
       }
-      &:first-child {
+    }
+    // properties for all <a> in header-bottom
+    .header-bottom {
+      a {
+        color: $mainFontColor;
+        &:hover {
+          text-decoration: none;
+          //box-shadow: 0 0 5px 5px rgba(179, 179, 179, 0.8);
+          //background-color: rgba(179, 179, 179, 0.5);
+        }
+        &:first-child {
+          display: block;
+        }
+      }
+      // Logo block properties
+      .logo {
         display: block;
-      }
-    }
-    // Logo block properties
-    .logo {
-      display: block;
-      text-align: center;
-      @media (min-width: map-get($grid-breakpoints, "sm")) {
-        text-align: left;
-      }
-      a {
-        font-size: 30px;
-        min-width: 152px;
-        font-weight: 600;
-        &:hover {
-          color: $mainFontColor;
+        text-align: center;
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+          text-align: left;
         }
-      }
-      span {
-        vertical-align: middle;
-      }
-      p {
-        //width: 100%;
-        font-size: $smallFontSizeSm;
-        @media (min-width: map-get($grid-breakpoints, "md")) {
-          font-size: $smallFontSizeMd;
-        }
-
-        font-weight: 400;
-      }
-    }
-    // Get a call block properties
-    .get-a-call {
-      //display: block;
-      text-transform: uppercase;
-      font-size: $mediumFontSize;
-      font-weight: 400;
-      text-align: center;
-      padding-top: 0;
-      vertical-align: middle;
-      @media (min-width: map-get($grid-breakpoints, "sm")) {
-        padding-top: $basePaddingTopSmAndMd;
-      }
-      a {
-        min-width: ($mediumFontSize * 11) + $radiusOfPhoneCalling + 4px;
-        svg {
-          width: 25px;
-          height: 25px;
-
-          // hover on <a> && <svg>
+        a {
+          font-size: 30px;
+          min-width: 152px;
+          font-weight: 600;
           &:hover {
-
+            color: $mainFontColor;
           }
-        }
-        &:hover {
-          svg {
-            box-shadow: 0 0 0 $radiusOfPhoneCalling #ffac00;
-            background: $mainFontColor2;
-            border-radius: 50% 50%;
-            fill: #fff;
-            animation: tel .8s ease-in infinite;
-            @keyframes tel {
-              45% {
-                transform: rotate(-0.1turn)
-              }
-              45% {
-                transform: rotate(0.2turn)
-              }
-            }
-          }
-          color: $mainFontColor2;
         }
         span {
-          padding-left: $radiusOfPhoneCalling - 2;
+          vertical-align: middle;
+        }
+        p {
+          //width: 100%;
+          font-size: $smallFontSizeSm;
+          @media (min-width: map-get($grid-breakpoints, "md")) {
+            font-size: $smallFontSizeMd;
+          }
+
+          font-weight: 400;
         }
       }
-    }
-    // Contact information block properies
-    .contact-information {
-      display: block;
-      text-align: center;
-      @media (min-width: map-get($grid-breakpoints, "sm")) {
-        text-align: end;
-      }
-      p {
-        font-size: $smallFontSizeMd+1;
-        margin-top: 8px;
-        margin-bottom: 0;
-      }
-      a {
-        font-weight: bold;
+      // Get a call block properties
+      .get-a-call {
+        //display: block;
+        text-transform: uppercase;
         font-size: $mediumFontSize;
-        &:hover {
-          color: $mainFontColor2;
+        font-weight: 400;
+        text-align: center;
+        padding-top: 0;
+        vertical-align: middle;
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+          padding-top: $basePaddingTopSmAndMd;
+        }
+        a {
+          min-width: ($mediumFontSize * 11) + $radiusOfPhoneCalling + 4px;
+          svg {
+            width: 25px;
+            height: 25px;
+
+            // hover on <a> && <svg>
+            &:hover {
+
+            }
+          }
+          &:hover {
+            svg {
+              box-shadow: 0 0 0 $radiusOfPhoneCalling #ffac00;
+              background: $mainFontColor2;
+              border-radius: 50% 50%;
+              fill: #fff;
+              animation: tel .8s ease-in infinite;
+              @keyframes tel {
+                45% {
+                  transform: rotate(-0.1turn)
+                }
+                45% {
+                  transform: rotate(0.2turn)
+                }
+              }
+            }
+            color: $mainFontColor2;
+          }
+          span {
+            padding-left: $radiusOfPhoneCalling - 2;
+          }
+        }
+      }
+      // Contact information block properies
+      .contact-information {
+        display: block;
+        text-align: center;
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+          text-align: end;
+        }
+        p {
+          font-size: $smallFontSizeMd+1;
+          margin-top: 8px;
+          margin-bottom: 0;
+        }
+        a {
+          font-weight: bold;
+          font-size: $mediumFontSize;
+          &:hover {
+            color: $mainFontColor2;
+          }
         }
       }
     }
@@ -197,12 +200,12 @@ body {
     .header-link-bottom {
       display: none;
       padding-left: 0px;
-      @media (min-width: map-get($grid-breakpoints, "sm")) {
-        display: block;
-        padding-top: 130px;
-        padding-left: 27px;
-        transform: rotate(-270deg);
-      }
+      //@media (min-width: map-get($grid-breakpoints, "sm")) {
+      //  display: block;
+      //  padding-top: 130px;
+      //  padding-left: 27px;
+      //  transform: rotate(-270deg);
+      //}
     }
 
     .header-section-form {
