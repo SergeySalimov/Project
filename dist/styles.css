@@ -7077,6 +7077,9 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+body {
+  font-family: Futura, sans-serif; }
+
 .first-section {
   background: url("../img/header-bg.jpg");
   background-size: cover;
@@ -7102,7 +7105,7 @@ a.text-dark:hover, a.text-dark:focus {
     .first-section header .logo span {
       vertical-align: middle; }
     .first-section header .logo p {
-      font-size: 8px;
+      font-size: 9px;
       font-weight: 400; }
       @media (min-width: 768px) {
         .first-section header .logo p {
@@ -7161,12 +7164,17 @@ a.text-dark:hover, a.text-dark:focus {
     .first-section main h1 {
       display: block;
       line-height: 1.2;
+      text-align: center;
       font-size: 23px;
       font-weight: 400;
+      padding-left: 3px;
       border-left: 18px solid transparent;
       border-image: url("../img/h1.png");
       border-image-slice: 29;
       border-image-repeat: round; }
+      @media (min-width: 576px) {
+        .first-section main h1 {
+          text-align: left; } }
       @media (min-width: 576px) {
         .first-section main h1 {
           font-size: 33px; } }

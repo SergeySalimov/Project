@@ -3,7 +3,7 @@ $basePaddingTopSmAndMd: 28px;
 $mainFontColor: #000;
 $mainFontColor2: #ffac00;
 $smallFontSizeMd: 10px;
-$smallFontSizeSm: 8px;
+$smallFontSizeSm: 9px;
 $bigFontSizeXs: 23px;
 $bigFontSizeSm: 33px;
 $bigFontSizeMd: 45px;
@@ -22,6 +22,9 @@ $radiusOfPhoneCalling: 10px;
 
 // Верстка Mobile First: XS - телефон, SM - планшет - перевернуты телефон, MD - монитор, LG - широкий экран
 
+body {
+  font-family: Futura, sans-serif;
+}
 
 .first-section {
   // Common properties
@@ -101,8 +104,12 @@ $radiusOfPhoneCalling: 10px;
             fill: #fff;
             animation: tel .8s ease-in infinite;
             @keyframes tel {
-              45% {transform: rotate(-0.1turn)}
-              45% {transform: rotate(0.2turn)}
+              45% {
+                transform: rotate(-0.1turn)
+              }
+              45% {
+                transform: rotate(0.2turn)
+              }
             }
 
           }
@@ -143,10 +150,10 @@ $radiusOfPhoneCalling: 10px;
     h1 {
       display: block;
       line-height: 1.2;
-      //text-align: center;
-      //@media (min-width: map-get($grid-breakpoints, "sm")) {
-      //  text-align: left;
-      //}
+      text-align: center;
+      @media (min-width: map-get($grid-breakpoints, "sm")) {
+        text-align: left;
+      }
       font-size: $bigFontSizeXs;
       @media (min-width: map-get($grid-breakpoints, "sm")) {
         font-size: $bigFontSizeSm;
@@ -154,11 +161,8 @@ $radiusOfPhoneCalling: 10px;
       @media (min-width: map-get($grid-breakpoints, "md")) {
         font-size: $bigFontSizeMd;
       }
-      // old
       font-weight: 400;
-
-
-
+      padding-left: 3px;
       border-left: 18px solid transparent;
       border-image: url("../img/h1.png");
       border-image-slice: 29;
@@ -183,6 +187,7 @@ $radiusOfPhoneCalling: 10px;
         font-size: $mediumFontSize;
         padding-top: $basePaddingTop;
       }
+
     }
     .header-link-bottom {
       display: none;
@@ -217,7 +222,6 @@ $radiusOfPhoneCalling: 10px;
 @media (min-width: map-get($grid-breakpoints, "sm")) and (max-width: map-get($grid-breakpoints, "md")) {
 
 }
-
 
 //
 //#second {
