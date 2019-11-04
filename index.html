@@ -132,17 +132,86 @@
       </div>
     </div>
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-auto header-link-bottom">
+      <div class="row">
+        <div class="col-md-3 header-link-bottom">
           <span>узнать подробнее</span>
         </div>
-        <div class="col-xs-12 col-md-8">
-          <div class="header-section-form">
+        <div class="col-xs-12 col-md-9">
+          <div class="header-section-form float-sm-right">
             <h3>Рассчитайте цену<br/>за 5 минут</h3>
             <h5>Назовем честную цену по телефону, которая не поменяется при замере</h5>
+            <form>
+              <div class="form-row text-center">
+                <div class="form-group col-12">
+                  <select class="custom-select mr-sm-2">
+                    <option selected disabled>выберите тип изделия</option>
+                    <option value="1">Свободновисящие рольшторы</option>
+                    <option value="2">Кассетные рольшторы</option>
+                    <option value="3">Рольшторы День-Ночь</option>
+                    <option value="4">Рольшторы с фотопечатью</option>
+                    <option value="5">Рольшторы на пульте управления</option>
+                    <option value="6">Алюминиевые жалюзи</option>
+                    <option value="7">Бамбуковые жалюзи</option>
+                    <option value="8">Пластиковые жалюзи</option>
+                    <option value="9">Вертикальные жалюзи</option>
+                    <option value="10">Тканевые жалюзи</option>
+                    <option value="11">Жалюзи с фотопечатью</option>
+                    <option value="12">Мультифактурные жалюзи</option>
+                    <option value="13">Японские шторы</option>
+                    <option value="14">Римские шторы</option>
+                    <option value="15">Шторы-Плиссе</option>
+                  </select>
+                </div>
+                <div class="form-group col-6">
+                  <input type="number"
+                         class="form-control"
+                         title="Введите ширину изделия"
+                         name="jaluzi-width"
+                         placeholder="ширина">
+                </div>
+                <div class="form-group col-6">
+                  <input type="number"
+                         class="form-control"
+                         title="Введите высоту изделия"
+                         name="jaluzi-height"
+                         placeholder="высота">
+                </div>
+                <div class="form-group col-6">
+                  <input type="text"
+                         class="form-control"
+                         title="Введите ваше имя"
+                         size="20"
+                         placeholder="ваше имя"
+                         autocomplete="on">
+                </div>
+                <div class="form-group col-6">
+                  <input type="phone"
+                         class="form-control"
+                         title="Введите ваш телефон, формат +375 29 1234567"
+                         size="30"
+                         name="phone"
+                         placeholder="ваш телефон"
+                         autocomplete="on"
+                         autofocus
+                         value="+375 "
+                         pattern="\+[0-9]{3} [0-9]{2} [0-9]{7}"
+                         aria-describedby="phoneHelp"/>
+                  <small id="phoneHelp" class="form-text text-muted">формат +375 xx 1234567</small>
+                </div>
+                <div class="form-group offset-2 col-8 offset-2">
+                  <button type="button" class="btn btn-warning btn-block">Рассчитать цену</button>
+                </div>
+
+
+
+              </div>
+            </form>
+
+
+
+
           </div>
         </div>
-
       </div>
     </div>
 
