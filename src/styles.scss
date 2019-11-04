@@ -8,6 +8,7 @@ $bigFontSizeXs: 23px;
 $bigFontSizeSm: 33px;
 $bigFontSizeMd: 45px;
 $mediumFontSize: 14px;
+$mediumFontSizeSm: 12px;
 $mediumFontSizeXs: 10px;
 $radiusOfPhoneCallingIconSvg: 10px;
 
@@ -210,25 +211,31 @@ body {
 
     .header-section-form {
       text-align: center;
-      @media (min-width: map-get($grid-breakpoints, "sm")) {
-        text-align: right;
-        max-width: 400px;
-      }
+      min-width: 200px;
       font-weight: 300;
       display: block;
       background-color: rgba(179, 179, 179, 0.3);
       border-radius: 20px;
 
-      h5 {
-        font-size: $mediumFontSize;
-      }
-
-
-
-      @media (min-width: map-get($grid-breakpoints, "sm")) {
+      @media (min-width: map-get($grid-breakpoints, "md")) {
         text-align: right;
-        min-width: 200px;
+        max-width: 340px;
+        position: absolute;
+        right: -150px;
+        top: -57px;
       }
+
+      h5 {
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+          font-size: $mediumFontSizeSm;
+        }
+        font-size: $mediumFontSizeXs;
+      }
+
+      //@media (min-width: map-get($grid-breakpoints, "sm")) {
+      //  text-align: right;
+      //  min-width: 200px;
+      //}
 
     }
   }

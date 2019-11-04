@@ -7213,17 +7213,20 @@ body {
           transform: rotate(-270deg); } }
     .first-section main .header-section-form {
       text-align: center;
+      min-width: 200px;
       font-weight: 300;
       display: block;
       background-color: rgba(179, 179, 179, 0.3);
       border-radius: 20px; }
-      @media (min-width: 576px) {
+      @media (min-width: 768px) {
         .first-section main .header-section-form {
           text-align: right;
-          max-width: 400px; } }
+          max-width: 340px;
+          position: absolute;
+          right: -150px;
+          top: -57px; } }
       .first-section main .header-section-form h5 {
-        font-size: 14px; }
-      @media (min-width: 576px) {
-        .first-section main .header-section-form {
-          text-align: right;
-          min-width: 200px; } }
+        font-size: 10px; }
+        @media (min-width: 576px) {
+          .first-section main .header-section-form h5 {
+            font-size: 12px; } }
