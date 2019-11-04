@@ -9,7 +9,7 @@ $bigFontSizeSm: 33px;
 $bigFontSizeMd: 45px;
 $mediumFontSize: 14px;
 $mediumFontSizeXs: 10px;
-$radiusOfPhoneCalling: 10px;
+$radiusOfPhoneCallingIconSvg: 10px;
 
 // уменьшить margin
 //$spacer: 0rem;
@@ -95,7 +95,7 @@ body {
           padding-top: $basePaddingTopSmAndMd;
         }
         a {
-          min-width: ($mediumFontSize * 11) + $radiusOfPhoneCalling + 4px;
+          min-width: ($mediumFontSize * 11) + $radiusOfPhoneCallingIconSvg + 4px;
           svg {
             width: 25px;
             height: 25px;
@@ -107,7 +107,7 @@ body {
           }
           &:hover {
             svg {
-              box-shadow: 0 0 0 $radiusOfPhoneCalling #ffac00;
+              box-shadow: 0 0 0 $radiusOfPhoneCallingIconSvg #ffac00;
               background: $mainFontColor2;
               border-radius: 50% 50%;
               fill: #fff;
@@ -124,7 +124,7 @@ body {
             color: $mainFontColor2;
           }
           span {
-            padding-left: $radiusOfPhoneCalling - 2;
+            padding-left: $radiusOfPhoneCallingIconSvg - 2;
           }
         }
       }
@@ -199,7 +199,7 @@ body {
     }
     .header-link-bottom {
       display: none;
-      padding-left: 0px;
+      padding-left: 0;
       @media (min-width: map-get($grid-breakpoints, "md")) {
         display: block;
         padding-top: 130px;
@@ -212,6 +212,22 @@ body {
       text-align: center;
       @media (min-width: map-get($grid-breakpoints, "sm")) {
         text-align: right;
+        max-width: 400px;
+      }
+      font-weight: 300;
+      display: block;
+      background-color: rgba(179, 179, 179, 0.3);
+      border-radius: 20px;
+
+      h5 {
+        font-size: $mediumFontSize;
+      }
+
+
+
+      @media (min-width: map-get($grid-breakpoints, "sm")) {
+        text-align: right;
+        min-width: 200px;
       }
 
     }
