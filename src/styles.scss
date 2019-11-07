@@ -1,5 +1,8 @@
 $basePaddingTop: 15px;
 $basePaddingTopSmAndMd: 28px;
+$basePadding: 25px;
+$marginBetweenSectionMd: 50px;
+$marginBetweenSectionXs: 15px;
 $mainFontColor: #000;
 $mainFontColor2: #ffac00;
 $smallFontSizeMd: 10px;
@@ -10,14 +13,13 @@ $bigFontSizeMd: 45px;
 $mediumFontSize: 14px;
 $mediumFontSizeSm: 12px;
 $mediumFontSizeXs: 10px;
+$letterSpaceStandart: 1.3px;
 $radiusOfPhoneCallingIconSvg: 10px;
 
 // переопределили warning в бутсрапе на свой оранжевый!!
 $warning: $mainFontColor2;
-// уменьшить margin
-//$spacer: 0rem;
 
-@import "fonts";
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap');
 
 // Custom.scss
 // Option A: Include all of Bootstrap
@@ -26,7 +28,7 @@ $warning: $mainFontColor2;
 // Верстка Mobile First: XS - телефон, SM - планшет - перевернуты телефон, MD - монитор, LG - широкий экран
 
 body {
-  font-family: Futura, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .first-section {
@@ -67,13 +69,15 @@ body {
         a {
           font-size: 30px;
           min-width: 152px;
-          font-weight: 600;
+          font-weight: 400;
           &:hover {
             color: $mainFontColor;
           }
         }
         span {
           vertical-align: middle;
+          letter-spacing: $letterSpaceStandart;
+          font-weight: 600;
         }
         p {
           //width: 100%;
@@ -82,7 +86,7 @@ body {
             font-size: $smallFontSizeMd;
           }
 
-          font-weight: 400;
+          font-weight: 300;
         }
       }
       // Get a call block properties
@@ -90,7 +94,8 @@ body {
         //display: block;
         text-transform: uppercase;
         font-size: $mediumFontSize;
-        font-weight: 400;
+        font-weight: 600;
+        letter-spacing: $letterSpaceStandart;
         text-align: center;
         padding-top: 0;
         vertical-align: middle;
@@ -98,7 +103,7 @@ body {
           padding-top: $basePaddingTopSmAndMd;
         }
         a {
-          min-width: ($mediumFontSize * 11) + $radiusOfPhoneCallingIconSvg + 4px;
+          min-width: ($mediumFontSize * 11) + $radiusOfPhoneCallingIconSvg + 22px;
           svg {
             width: 25px;
             height: 25px;
@@ -135,8 +140,10 @@ body {
       .contact-information {
         display: block;
         text-align: center;
+
         @media (min-width: map-get($grid-breakpoints, "sm")) {
           text-align: end;
+          min-width: 160px;
         }
         p {
           font-size: $smallFontSizeMd+1;
@@ -144,6 +151,7 @@ body {
           margin-bottom: 0;
         }
         a {
+          letter-spacing: $letterSpaceStandart - 0.1px;
           font-weight: bold;
           font-size: $mediumFontSize;
           &:hover {
@@ -159,6 +167,10 @@ body {
       padding-top: $basePaddingTopSmAndMd;
     }
     h1 {
+      font-weight: 100;
+      b {
+        font-weight: 600;
+      }
       display: block;
       line-height: 1.2;
       text-align: center;
@@ -172,8 +184,9 @@ body {
       @media (min-width: map-get($grid-breakpoints, "md")) {
         font-size: $bigFontSizeMd;
       }
-      font-weight: 400;
-      padding-left: 3px;
+
+      padding-left: $basePadding;
+      letter-spacing: $letterSpaceStandart;
       border-left: 18px solid transparent;
       border-image: url("../img/h1.png");
       border-image-slice: 29;
@@ -193,6 +206,15 @@ body {
       }
     }
     p {
+      font-weight: 400;
+      b {
+        font-weight: 600;
+      }
+      padding-left: $basePadding;
+      padding-right: $basePadding;
+
+      letter-spacing: $letterSpaceStandart + 0.2;
+      text-align: justify;
       font-size: $mediumFontSizeXs;
       @media (min-width: map-get($grid-breakpoints, "lg")) {
         font-size: $mediumFontSize;
@@ -212,9 +234,12 @@ body {
     }
 
     .header-section-form {
-      padding: 5px 10px;
+      padding: 5px 5px;
+      @media (min-width: map-get($grid-breakpoints, "sm")) {
+        padding: $basePaddingTop $basePadding;
+      }
       text-align: center;
-      min-width: 200px;
+      min-width: 270px;
       font-weight: 300;
       display: block;
       background-color: rgba(179, 179, 179, 0.5);
@@ -222,29 +247,118 @@ body {
 
       @media (min-width: map-get($grid-breakpoints, "sm")) {
         text-align: right;
-        max-width: 300px;
+        max-width: 400px;
       }
       h3 {
+        font-weight: 400;
+        font-size: $bigFontSizeSm;
         border-right: 18px solid transparent;
         border-image: url("../img/header-form.png");
         border-image-slice: 28;
         border-image-repeat: round;
-        padding-right: 5px;
+        padding-right: $basePadding;
+        margin-right: 10px;
 
       }
 
       h5 {
+        padding: 3px $basePadding;
+        font-weight: 100;
+        letter-spacing: $letterSpaceStandart - 0.1px;
+        line-height: 1.5;
         @media (min-width: map-get($grid-breakpoints, "sm")) {
           font-size: $mediumFontSizeSm;
         }
         font-size: $mediumFontSizeXs;
       }
       form {
+        font-size: $mediumFontSize + 7px;
+        font-weight: 400;
 
+        select, ::placeholder, input[type=phone] {
+          //font-size: $mediumFontSizeSm;
+          font-weight: 100;
+          letter-spacing: $letterSpaceStandart;
+        }
+        select, input {
+          border-radius: 20px;
+        }
+        input[type=phone] {
+          text-align: left;
+        }
+        small {
+          font-size: $mediumFontSizeSm;
+        }
+        ::placeholder {
+          font-size: $mediumFontSize;
+          text-align: center;
+        }
+        select {
+          font-size: $mediumFontSize;
+          option {
+            font-weight: 100;
+            line-height: 1.2;
+          }
+        }
         button {
           font-weight: 400;
           color: white;
           letter-spacing: 1.1px;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+}
+
+$svgSizeXs: 34px;
+$svgSizeSm: 54px;
+$svgSizeMd: 70px;
+
+.second-section {
+  background-color: white;
+  margin-top: $marginBetweenSectionXs;
+  @media (min-width: map-get($grid-breakpoints, "sm")) {
+  margin-top: $marginBetweenSectionMd;
+  }
+  .second-section-header {
+
+    & > div {
+      text-align: center;
+      padding: 2px 3px;
+
+      svg {
+
+        width: $svgSizeXs;
+        height: $svgSizeXs;
+        & + span {
+          font-weight: 400;
+          display: block;
+          padding-top: 10px;
+          font-size: $smallFontSizeSm;
+          line-height: 120%;
+          word-break: keep-all;
+        }
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+          width: $svgSizeSm;
+          height: $svgSizeSm;
+          & + span {
+            font-size: $mediumFontSizeSm;
+            text-transform: uppercase;
+            color: grey;
+            padding-top: 15px;
+          }
+        }
+        @media (min-width: map-get($grid-breakpoints, "md")) {
+          width: $svgSizeMd;
+          height: $svgSizeMd;
+          & + span {
+            font-size: $mediumFontSize;
+            font-weight: 600;
+            padding-top: 20px;
+            line-height: 140%;
+            color: lightgrey;
+          }
         }
       }
     }
