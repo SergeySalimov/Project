@@ -395,9 +395,11 @@ $svgSizeMd: 70px;
       @include marginInsideSection ();
       border-left: solid 1px black;
       border-right: solid 1px black;
+      .tab-content {
 
+
+      }
     }
-
   }
 }
 
