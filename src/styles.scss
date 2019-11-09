@@ -38,6 +38,7 @@ $warning: $mainFontColor2;
     margin-top: $marginInsideSectionMd;
   }
 }
+
 @mixin marginBetweenSection() {
   margin-top: $marginBetweenSectionXs;
   @media (min-width: map-get($grid-breakpoints, "sm")) {
@@ -328,6 +329,16 @@ body {
 $svgSizeXs: 34px;
 $svgSizeSm: 54px;
 $svgSizeMd: 70px;
+$cardWidthMaxXs: 22rem;
+$cardWidthMaxSm: 20rem;
+$cardWidthMaxLg: 18rem;
+
+$cardWidthMin: 16rem;
+
+$cardWidthXs: 150px;
+$cardWidthSm: 199px;
+$cardWidthMd: 250px;
+
 
 .second-section {
   background: url('../img/filter-bg.jpg');
@@ -395,12 +406,76 @@ $svgSizeMd: 70px;
       @include marginInsideSection ();
       border-left: solid 1px black;
       border-right: solid 1px black;
-      .tab-content {
+      .list-group {
+        margin: 0 3px 5px 3px;
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+          margin: 7px auto;
+        }
+        @media (min-width: map-get($grid-breakpoints, "md")) {
+          margin: 0 7px 10px 7px;
+        }
 
+        font-size: $mediumFontSize;
+      }
+    }
+    .second-section-carts {
+      margin-bottom: 10px;
+      .tab-pane {
+        .card {
+          // only for XS
+          @media (max-width: map-get($grid-breakpoints, "sm")) {
+            margin: 3px auto;
+          }
+          @media (min-width: map-get($grid-breakpoints, "sm")) {
+            margin-bottom: 6px;
+          }
+
+          max-width: $cardWidthMaxXs;
+          min-width: $cardWidthMin;
+          @media (min-width: map-get($grid-breakpoints, "sm")) {
+            max-width: $cardWidthMaxSm;
+          }
+          @media (min-width: map-get($grid-breakpoints, "sm")) {
+            max-width: $cardWidthMaxLg;
+          }
+
+
+
+          //width: $cardWidthXs;
+          //@media (min-width: map-get($grid-breakpoints, "sm")) {
+          //  width: $cardWidthSm;
+          //}
+          //@media (min-width: map-get($grid-breakpoints, "md")) {
+          //  width: $cardWidthMd;
+          //}
+
+          img {
+            margin-bottom: -10px;
+          }
+          .card-body {
+            &:first-of-type {
+              height: 50px;
+            }
+            &:last-of-type {
+              height: 70px;
+            }
+
+          }
+          ul {
+            li {
+              font-size: $mediumFontSizeSm - 1;
+            }
+          }
+
+        }
 
       }
     }
   }
+}
+
+#quality-seqtion {
+
 }
 
 // media for sm+md
