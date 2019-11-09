@@ -422,12 +422,11 @@ $cardWidthMd: 250px;
       margin-bottom: 10px;
       .tab-pane {
         .card {
-          // only for XS
-          @media (max-width: map-get($grid-breakpoints, "sm")) {
+
             margin: 3px auto;
-          }
-          @media (min-width: map-get($grid-breakpoints, "sm")) {
-            margin-bottom: 6px;
+
+          @media (min-width: map-get($grid-breakpoints, "md")) {
+            margin: 6px 15px;
           }
 
           max-width: $cardWidthMaxXs;

@@ -7310,14 +7310,12 @@ body {
     .second-section .second-section-main .second-section-carts {
       margin-bottom: 10px; }
       .second-section .second-section-main .second-section-carts .tab-pane .card {
+        margin: 3px auto;
         max-width: 22rem;
         min-width: 16rem; }
-        @media (max-width: 576px) {
+        @media (min-width: 768px) {
           .second-section .second-section-main .second-section-carts .tab-pane .card {
-            margin: 3px auto; } }
-        @media (min-width: 576px) {
-          .second-section .second-section-main .second-section-carts .tab-pane .card {
-            margin-bottom: 6px; } }
+            margin: 6px 15px; } }
         @media (min-width: 576px) {
           .second-section .second-section-main .second-section-carts .tab-pane .card {
             max-width: 20rem; } }
