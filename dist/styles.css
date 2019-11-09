@@ -7335,6 +7335,8 @@ body {
             max-width: 18rem; } }
         .second-section .second-section-main .second-section-carts .tab-pane .card img {
           margin-bottom: -10px; }
+        .second-section .second-section-main .second-section-carts .tab-pane .card .card-body h5 {
+          font-size: 15px; }
         .second-section .second-section-main .second-section-carts .tab-pane .card .card-body:first-of-type {
           height: 50px; }
         .second-section .second-section-main .second-section-carts .tab-pane .card .card-body:last-of-type {

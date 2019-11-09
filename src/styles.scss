@@ -470,6 +470,9 @@ $cardWidthMd: 250px;
             margin-bottom: -10px;
           }
           .card-body {
+            h5 {
+              font-size: $mediumFontSize + 1;
+            }
             &:first-of-type {
               height: 50px;
             }
