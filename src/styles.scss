@@ -47,6 +47,13 @@ $warning: $mainFontColor2;
   }
 }
 
+@mixin paddingBetweenSection () {
+  padding-top: 30px;
+  @media (min-width: map-get($grid-breakpoints, "md")) {
+    padding-top: 80px;
+  }
+}
+
 @mixin textOnHeadOfSectionWithImg($fontWeightAdjustment: 0) {
   span {
     padding-left: 1px;
@@ -76,6 +83,13 @@ $warning: $mainFontColor2;
     font-size: $mediumFontSize;
     padding-top: $basePaddingTop;
   }
+}
+
+@mixin placeholderStyle() {
+  font-size: $mediumFontSize;
+  text-align: center;
+  font-weight: 100;
+  letter-spacing: $letterSpaceStandart;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap');
@@ -308,7 +322,7 @@ body {
         font-size: $mediumFontSize + 7px;
         font-weight: 400;
 
-        select, ::placeholder, input[type=phone] {
+        select, input[type=phone] {
           //font-size: $mediumFontSizeSm;
           font-weight: 100;
           letter-spacing: $letterSpaceStandart;
@@ -323,8 +337,7 @@ body {
           font-size: $mediumFontSizeSm;
         }
         ::placeholder {
-          font-size: $mediumFontSize;
-          text-align: center;
+          @include placeholderStyle ();
         }
         select {
           font-size: $mediumFontSize;
@@ -429,7 +442,16 @@ $cardWidthMd: 250px;
       margin-bottom: 10px;
       .tab-pane {
         .card {
-
+          .form-group {
+            ::placeholder {
+              @include placeholderStyle ();
+            }
+            button {
+              text-transform: uppercase;
+              font-size: $mediumFontSize;
+              font-weight: 500;
+            }
+          }
           margin: 3px auto;
 
           @media (min-width: map-get($grid-breakpoints, "md")) {
@@ -454,6 +476,7 @@ $cardWidthMd: 250px;
             &:last-of-type {
               height: 70px;
             }
+
           }
           ul {
             li {
@@ -470,10 +493,7 @@ $cardWidthMd: 250px;
   background: url('../img/quality-bg.jpg');
   background-size: cover;
   @include marginBetweenSection();
-  padding-top: 30px;
-  @media (min-width: map-get($grid-breakpoints, "md")) {
-    padding-top: 80px;
-  }
+  @include paddingBetweenSection ();
   .quality-section-main {
     h2 {
       @include textOnHeadOfSectionWithImg (100);
@@ -525,6 +545,19 @@ $cardWidthMd: 250px;
     }
   }
 
+}
+
+#reviews-section {
+  background: url('../img/reviews-bg.png');
+  background-size: cover;
+  @include marginBetweenSection();
+  @include paddingBetweenSection();
+
+  .reviews-section-main {
+    h2 {
+      @include textOnHeadOfSectionWithImg (100);
+    }
+  }
 }
 
 // media for sm+md

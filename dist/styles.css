@@ -7206,7 +7206,7 @@ body {
       .first-section main .header-section-form form {
         font-size: 21px;
         font-weight: 400; }
-        .first-section main .header-section-form form select, .first-section main .header-section-form form ::placeholder, .first-section main .header-section-form form input[type=phone] {
+        .first-section main .header-section-form form select, .first-section main .header-section-form form input[type=phone] {
           font-weight: 100;
           letter-spacing: 1.3px; }
         .first-section main .header-section-form form select, .first-section main .header-section-form form input {
@@ -7217,7 +7217,9 @@ body {
           font-size: 12px; }
         .first-section main .header-section-form form ::placeholder {
           font-size: 14px;
-          text-align: center; }
+          text-align: center;
+          font-weight: 100;
+          letter-spacing: 1.3px; }
         .first-section main .header-section-form form select {
           font-size: 14px; }
           .first-section main .header-section-form form select option {
@@ -7313,6 +7315,15 @@ body {
         margin: 3px auto;
         max-width: 22rem;
         min-width: 16rem; }
+        .second-section .second-section-main .second-section-carts .tab-pane .card .form-group ::placeholder {
+          font-size: 14px;
+          text-align: center;
+          font-weight: 100;
+          letter-spacing: 1.3px; }
+        .second-section .second-section-main .second-section-carts .tab-pane .card .form-group button {
+          text-transform: uppercase;
+          font-size: 14px;
+          font-weight: 500; }
         @media (min-width: 768px) {
           .second-section .second-section-main .second-section-carts .tab-pane .card {
             margin: 6px 15px; } }
@@ -7423,3 +7434,31 @@ body {
           @media (min-width: 576px) {
             #quality-section .quality-section-navigation .tab-content .card .card-body .card-title {
               margin-top: 35px; } }
+
+#reviews-section {
+  background: url("../img/reviews-bg.png");
+  background-size: cover;
+  margin-top: 15px;
+  padding-top: 30px; }
+  @media (min-width: 576px) {
+    #reviews-section {
+      margin-top: 50px; } }
+  @media (min-width: 768px) {
+    #reviews-section {
+      padding-top: 80px; } }
+  #reviews-section .reviews-section-main h2 span {
+    padding-left: 1px;
+    font-size: 12px;
+    font-weight: 600; }
+    @media (min-width: 576px) {
+      #reviews-section .reviews-section-main h2 span {
+        padding-left: 15px; } }
+    @media (min-width: 576px) {
+      #reviews-section .reviews-section-main h2 span {
+        font-size: 21px; } }
+    @media (min-width: 768px) {
+      #reviews-section .reviews-section-main h2 span {
+        font-size: 29px; } }
+    @media (min-width: 576px) {
+      #reviews-section .reviews-section-main h2 span {
+        font-weight: 400; } }
