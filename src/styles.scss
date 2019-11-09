@@ -7,6 +7,7 @@ $marginInsideSectionMd: 35px;
 $marginInsideSectionXs: 10px;
 $mainFontColor: #000;
 $mainFontColor2: #ffac00;
+
 $smallFontSizeMd: 10px;
 $smallFontSizeSm: 9px;
 $bigFontSizeXs: 23px;
@@ -22,7 +23,7 @@ $radiusOfPhoneCallingIconSvg: 10px;
 $warning: $mainFontColor2;
 
 // Mixin для большого размера Шрифта, переменной указываем корректировку с необходимым знаком при необходимости
-@mixin FontSizeResponsiveXsSmMd($adjustment: 0, $xs: $bigFontSizeXs, $sm: $bigFontSizeSm, $md: $bigFontSizeMd) {
+@mixin fontSizeResponsiveXsSmMd($adjustment: 0, $xs: $bigFontSizeXs, $sm: $bigFontSizeSm, $md: $bigFontSizeMd) {
   font-size: $xs + $adjustment;
   @media (min-width: map-get($grid-breakpoints, "sm")) {
     font-size: $sm + $adjustment;
@@ -32,10 +33,10 @@ $warning: $mainFontColor2;
   }
 }
 
-@mixin marginInsideSection() {
-  margin-top: $marginInsideSectionXs;
+@mixin marginInsideSection($marginInsideSectionAdgustment: 0) {
+  margin-top: $marginInsideSectionXs + $marginInsideSectionAdgustment;
   @media (min-width: map-get($grid-breakpoints, "sm")) {
-    margin-top: $marginInsideSectionMd;
+    margin-top: $marginInsideSectionMd + $marginInsideSectionAdgustment;
   }
 }
 
@@ -43,6 +44,37 @@ $warning: $mainFontColor2;
   margin-top: $marginBetweenSectionXs;
   @media (min-width: map-get($grid-breakpoints, "sm")) {
     margin-top: $marginBetweenSectionMd;
+  }
+}
+
+@mixin textOnHeadOfSectionWithImg($fontWeightAdjustment: 0) {
+  span {
+    padding-left: 1px;
+    @media (min-width: map-get($grid-breakpoints, "sm")) {
+      padding-left: $basePadding - 10;
+    }
+    @include fontSizeResponsiveXsSmMd (0, $bigFontSizeXs - 11, $bigFontSizeSm - 12, $bigFontSizeMd - 16);
+    font-weight: 500 + $fontWeightAdjustment;
+    @media (min-width: map-get($grid-breakpoints, "sm")) {
+      font-weight: 300 + $fontWeightAdjustment;
+    }
+  }
+}
+
+@mixin pCoolStyle() {
+  font-weight: 400;
+  b {
+    font-weight: 600;
+  }
+  padding-left: $basePadding;
+  padding-right: $basePadding;
+
+  letter-spacing: $letterSpaceStandart + 0.2;
+  text-align: justify;
+  font-size: $mediumFontSizeXs;
+  @media (min-width: map-get($grid-breakpoints, "lg")) {
+    font-size: $mediumFontSize;
+    padding-top: $basePaddingTop;
   }
 }
 
@@ -204,7 +236,7 @@ body {
       @media (min-width: map-get($grid-breakpoints, "sm")) {
         text-align: left;
       }
-      @include FontSizeResponsiveXsSmMd;
+      @include fontSizeResponsiveXsSmMd;
 
       padding-left: $basePadding;
       letter-spacing: $letterSpaceStandart;
@@ -213,7 +245,7 @@ body {
       border-image-slice: 29;
       border-image-repeat: round;
       span {
-        @include FontSizeResponsiveXsSmMd(-8);
+        @include fontSizeResponsiveXsSmMd(-8);
         padding-left: 20px;
         @media (min-width: map-get($grid-breakpoints, "sm")) {
           padding-left: 50px;
@@ -221,21 +253,7 @@ body {
       }
     }
     p {
-      font-weight: 400;
-      b {
-        font-weight: 600;
-      }
-      padding-left: $basePadding;
-      padding-right: $basePadding;
-
-      letter-spacing: $letterSpaceStandart + 0.2;
-      text-align: justify;
-      font-size: $mediumFontSizeXs;
-      @media (min-width: map-get($grid-breakpoints, "lg")) {
-        font-size: $mediumFontSize;
-        padding-top: $basePaddingTop;
-      }
-
+      @include pCoolStyle ();
     }
     .header-link-bottom {
       display: none;
@@ -339,7 +357,6 @@ $cardWidthXs: 150px;
 $cardWidthSm: 199px;
 $cardWidthMd: 250px;
 
-
 .second-section {
   background: url('../img/filter-bg.jpg');
   background-size: cover;
@@ -390,17 +407,7 @@ $cardWidthMd: 250px;
     @include marginInsideSection ();
 
     .second-section-h2 {
-      span {
-        padding-left: 1px;
-        @media (min-width: map-get($grid-breakpoints, "sm")) {
-          padding-left: $basePadding - 10;
-        }
-        @include FontSizeResponsiveXsSmMd (0, $bigFontSizeXs - 11, $bigFontSizeSm - 12, $bigFontSizeMd - 16);
-        font-weight: 500;
-        @media (min-width: map-get($grid-breakpoints, "sm")) {
-          font-weight: 300;
-        }
-      }
+      @include textOnHeadOfSectionWithImg ();
     }
     .second-section-navigation {
       @include marginInsideSection ();
@@ -423,7 +430,7 @@ $cardWidthMd: 250px;
       .tab-pane {
         .card {
 
-            margin: 3px auto;
+          margin: 3px auto;
 
           @media (min-width: map-get($grid-breakpoints, "md")) {
             margin: 6px 15px;
@@ -437,17 +444,6 @@ $cardWidthMd: 250px;
           @media (min-width: map-get($grid-breakpoints, "sm")) {
             max-width: $cardWidthMaxLg;
           }
-
-
-
-          //width: $cardWidthXs;
-          //@media (min-width: map-get($grid-breakpoints, "sm")) {
-          //  width: $cardWidthSm;
-          //}
-          //@media (min-width: map-get($grid-breakpoints, "md")) {
-          //  width: $cardWidthMd;
-          //}
-
           img {
             margin-bottom: -10px;
           }
@@ -458,22 +454,76 @@ $cardWidthMd: 250px;
             &:last-of-type {
               height: 70px;
             }
-
           }
           ul {
             li {
               font-size: $mediumFontSizeSm - 1;
             }
           }
-
         }
-
       }
     }
   }
 }
 
-#quality-seqtion {
+#quality-section {
+  background: url('../img/quality-bg.jpg');
+  background-size: cover;
+  @include marginBetweenSection();
+  padding-top: 30px;
+  @media (min-width: map-get($grid-breakpoints, "md")) {
+    padding-top: 80px;
+  }
+  .quality-section-main {
+    h2 {
+      @include textOnHeadOfSectionWithImg (100);
+    }
+    p {
+      @include pCoolStyle ();
+    }
+  }
+  .quality-section-navigation {
+    @include marginInsideSection ();
+    .list-group {
+      .list-group-item.active {
+        color: $mainFontColor;
+        font-weight: 600;
+      }
+      a {
+        &:hover {
+          color: $mainFontColor2;
+        }
+        @include fontSizeResponsiveXsSmMd(1, $mediumFontSizeXs, $mediumFontSizeSm, $mediumFontSize);
+        background-color: transparent;
+        border: transparent;
+        color: grey;
+        font-weight: 400;
+      }
+    }
+    .tab-content {
+
+      .card {
+        background-color: transparent;
+        border: transparent;
+        .card-body {
+          border-left: solid 1px black;
+          .card-text {
+            font-weight: 100;
+            b {
+              font-weight: 600;
+            }
+            @include fontSizeResponsiveXsSmMd(0, $mediumFontSizeXs, $mediumFontSizeSm, $mediumFontSize);
+          }
+          .card-title {
+            @include fontSizeResponsiveXsSmMd(-4);
+            @include marginInsideSection();
+            color: $mainFontColor2;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
 
 }
 
