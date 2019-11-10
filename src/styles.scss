@@ -109,6 +109,13 @@ $warning: $mainFontColor2;
   height: $videoHeight * $scaleVideo;
 }
 
+@mixin textAlingXsLeftSmCenter() {
+  text-align: left;
+  @media (min-width: map-get($grid-breakpoints, "sm")) {
+    text-align: center;
+  }
+}
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap');
 
 // Custom.scss
@@ -153,7 +160,7 @@ body {
       // Первый элемент списка
       #first-nav-element {
         border-left: transparent;
-        border-top: solid 1px white;
+        //border-top: solid 1px white;
         @media (min-width: map-get($grid-breakpoints, "md")) {
           border-top: transparent;
         }
@@ -488,8 +495,19 @@ $cardWidthMd: 250px;
         @media (min-width: map-get($grid-breakpoints, "md")) {
           margin: 0 7px 10px 7px;
         }
+        li {
+          background-color: transparent;
+          font-size: $mediumFontSize;
+          color: $additionalFontColor;
+          font-weight: 600;
+          @include textAlingXsLeftSmCenter ();
+        }
+        a {
+          font-size: $mediumFontSize + 2;
+          font-weight: 300;
+          @include textAlingXsLeftSmCenter ();
 
-        font-size: $mediumFontSize;
+        }
       }
     }
     .second-section-carts {
@@ -565,6 +583,7 @@ $cardWidthMd: 250px;
       .list-group-item.active {
         color: $mainFontColor;
         font-weight: 600;
+        @include fontSizeResponsiveXsSmMd(0, $mediumFontSizeXs, $mediumFontSizeSm, $mediumFontSize)
       }
       a {
         &:hover {

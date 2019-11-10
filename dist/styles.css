@@ -7043,8 +7043,7 @@ body {
         border-left: solid 1px white;
         border-bottom: transparent; } }
   .first-section header #mainNavbar #first-nav-element {
-    border-left: transparent;
-    border-top: solid 1px white; }
+    border-left: transparent; }
     @media (min-width: 768px) {
       .first-section header #mainNavbar #first-nav-element {
         border-top: transparent; } }
@@ -7329,14 +7328,29 @@ body {
         .second-section .second-section-main .second-section-navigation {
           margin-top: 35px; } }
       .second-section .second-section-main .second-section-navigation .list-group {
-        margin: 0 3px 5px 3px;
-        font-size: 14px; }
+        margin: 0 3px 5px 3px; }
         @media (min-width: 576px) {
           .second-section .second-section-main .second-section-navigation .list-group {
             margin: 7px auto; } }
         @media (min-width: 768px) {
           .second-section .second-section-main .second-section-navigation .list-group {
             margin: 0 7px 10px 7px; } }
+        .second-section .second-section-main .second-section-navigation .list-group li {
+          background-color: transparent;
+          font-size: 14px;
+          color: grey;
+          font-weight: 600;
+          text-align: left; }
+          @media (min-width: 576px) {
+            .second-section .second-section-main .second-section-navigation .list-group li {
+              text-align: center; } }
+        .second-section .second-section-main .second-section-navigation .list-group a {
+          font-size: 16px;
+          font-weight: 300;
+          text-align: left; }
+          @media (min-width: 576px) {
+            .second-section .second-section-main .second-section-navigation .list-group a {
+              text-align: center; } }
     .second-section .second-section-main .second-section-carts {
       margin-bottom: 10px; }
       .second-section .second-section-main .second-section-carts .tab-pane .card {
@@ -7419,7 +7433,14 @@ body {
         margin-top: 35px; } }
     #quality-section .quality-section-navigation .list-group .list-group-item.active {
       color: #000;
-      font-weight: 600; }
+      font-weight: 600;
+      font-size: 10px; }
+      @media (min-width: 576px) {
+        #quality-section .quality-section-navigation .list-group .list-group-item.active {
+          font-size: 12px; } }
+      @media (min-width: 768px) {
+        #quality-section .quality-section-navigation .list-group .list-group-item.active {
+          font-size: 14px; } }
     #quality-section .quality-section-navigation .list-group a {
       font-size: 11px;
       background-color: transparent;
