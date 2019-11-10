@@ -11,7 +11,6 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
-
 .first-section {
   // Common properties
   background: url('../img/header-bg.jpg');
@@ -301,7 +300,6 @@ body {
     }
   }
 }
-
 .second-section {
   background: url('../img/filter-bg.jpg');
   background-size: cover;
@@ -434,7 +432,6 @@ body {
     }
   }
 }
-
 #quality-section {
   background: url('../img/quality-bg.jpg');
   @include sectionTopStyle ();
@@ -486,7 +483,6 @@ body {
   }
 
 }
-
 #reviews-section {
   background: url('../img/production-right.png');
   @include sectionTopStyle ();
@@ -557,7 +553,6 @@ body {
     }
   }
 }
-
 #production-photo-section {
   //background-image: url('../img/production-left.png'), url('../img/production-right.png');
   //background-position: left bottom, right top;
@@ -581,7 +576,6 @@ body {
     }
   }
 }
-
 #contact-section {
   background: url('../img/question-bg.jpg');
   @include sectionTopStyle ();
