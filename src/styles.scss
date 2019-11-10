@@ -25,6 +25,8 @@ $radiusOfPhoneCallingIconSvg: 10px;
 // переопределили warning в бутсрапе на свой оранжевый!!
 $warning: $mainFontColor2;
 
+
+
 // Mixin для большого размера Шрифта, переменной указываем корректировку с необходимым знаком при необходимости
 @mixin fontSizeResponsiveXsSmMd($adjustment: 0, $xs: $bigFontSizeXs, $sm: $bigFontSizeSm, $md: $bigFontSizeMd) {
   font-size: $xs + $adjustment;
@@ -55,6 +57,12 @@ $warning: $mainFontColor2;
   @media (min-width: map-get($grid-breakpoints, "md")) {
     padding-top: 80px;
   }
+}
+
+@mixin sectionTopStyle() {
+  background-size: cover;
+  @include marginBetweenSection();
+  @include paddingBetweenSection ();
 }
 
 @mixin textOnHeadOfSectionWithImg($fontWeightAdjustment: 0) {
@@ -97,6 +105,15 @@ $warning: $mainFontColor2;
   font-size: $mediumFontSizeSm;
 }
 
+@mixin textOnSectionHead {
+  h2 {
+    @include textOnHeadOfSectionWithImg (100);
+  }
+  p {
+    @include pCoolStyle ();
+  }
+}
+
 @mixin placeholderStyle() {
   font-size: $mediumFontSize;
   text-align: center;
@@ -107,6 +124,11 @@ $warning: $mainFontColor2;
 @mixin videoSizing($scaleVideo: 1) {
   width: $videoWidth * $scaleVideo;
   height: $videoHeight * $scaleVideo;
+}
+
+@mixin imgSizing($scaleImg: 1) {
+  width: $imgWidth * $scaleImg;
+  height: $imgHeight * $scaleImg;
 }
 
 @mixin textAlingXsLeftSmCenter() {
@@ -566,16 +588,9 @@ $cardWidthMd: 250px;
 
 #quality-section {
   background: url('../img/quality-bg.jpg');
-  background-size: cover;
-  @include marginBetweenSection();
-  @include paddingBetweenSection ();
+  @include sectionTopStyle ();
   .quality-section-main {
-    h2 {
-      @include textOnHeadOfSectionWithImg (100);
-    }
-    p {
-      @include pCoolStyle ();
-    }
+    @include textOnSectionHead ();
   }
   .quality-section-navigation {
     @include marginInsideSection ();
@@ -627,11 +642,8 @@ $videoWidth: 540px;
 $videoHeight: 315px;
 
 #reviews-section {
-  background: url('../img/reviews-bg.png');
-  background-size: cover;
-  @include marginBetweenSection();
-  @include paddingBetweenSection();
-
+  background: url('../img/production-right.png');
+  @include sectionTopStyle ();
   .reviews-section-main {
     h2 {
       @include textOnHeadOfSectionWithImg (100);
@@ -644,9 +656,7 @@ $videoHeight: 315px;
       .card {
         background-color: transparent;
         border: transparent;
-
         .card-header {
-
           h5 {
             button {
               &.btn.btn-link:hover {
@@ -663,7 +673,6 @@ $videoHeight: 315px;
           }
         }
         .card-body {
-
           border-left: solid 1px $mainFontColor;
           p {
             @include pNormStyle ();
@@ -681,9 +690,7 @@ $videoHeight: 315px;
               width: 75px;
               height: 75px;
             }
-
           }
-
           .video {
             margin: 5px auto;
             iframe {
@@ -701,7 +708,33 @@ $videoHeight: 315px;
           }
         }
       }
+    }
+  }
+}
 
+$imgWidth: 800px;
+$imgHeight: 533px;
+
+#production-photo-section {
+  //background-image: url('../img/production-left.png'), url('../img/production-right.png');
+  //background-position: left bottom, right top;
+  //background-repeat: no-repeat, no-repeat;
+  background: url('../img/reviews-bg.png');
+  @include sectionTopStyle ();
+  .production-section-main {
+    @include textOnSectionHead ();
+
+  }
+  #production-carousel {
+    @include paddingBetweenSection ();
+    li {
+      &.active {
+        background-color: $mainFontColorComplement;
+      }
+      background-color: $additionalFontColor2;
+    }
+    .carousel-control-next, .carousel-control-prev {
+      color: $mainFontColor;
     }
   }
 }
