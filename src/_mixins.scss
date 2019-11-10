@@ -108,3 +108,8 @@
     text-align: center;
   }
 }
+
+@mixin mapSizing($scaleMap: 1) {
+  width: $mapWidth * $scaleMap;
+  height: $mapHeight * $scaleMap;
+}

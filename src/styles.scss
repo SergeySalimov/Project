@@ -587,37 +587,59 @@ body {
   @include sectionTopStyle ();
   .contact-section-header {
     @include textOnSectionHead ();
-
   }
+  .contact-section-main {
+    .map {
+      iframe {
+        //width: 423px;
+        //height: 325px;
+        @include mapSizing(0.35);
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+          @include mapSizing(0.3);
+        }
+        @media (min-width: map-get($grid-breakpoints, "md")) {
+          @include mapSizing(0.4);
+        }
+        @media (min-width: map-get($grid-breakpoints, "lg")) {
+          @include mapSizing(0.7);
+        }
+      }
+    }
 
+    .card {
+      background: transparent;
+      border: transparent;
+
+      .card-body {
+
+        h5 {
+          @include fontSizeResponsiveXsSmMd (0, $bigFontSizeSm - 12, $bigFontSizeSm - 12, $bigFontSizeSm - 6);
+        }
+        ul {
+          list-style: none;
+          padding-left: $basePadding - 10;
+          li {
+            &:first-child {
+              padding-bottom: $basePadding;
+            }
+            &:last-child {
+              padding-top: $basePadding;
+            }
+            font-size: $mediumFontSizeSm;
+            i {
+              font-size: $mediumFontSize;
+            }
+            a {
+              padding-left: 5px;
+              color: $mainFontColor;
+              &:hover {
+                color: $mainFontColor2;
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
 }
-
-//  .image-link {
-//    width: 40px;
-//    height: 40px;
-//    background: url(../img/social-sprite.png) 0 0 no-repeat;
-//    margin: 8px 8px;
-//    opacity: 0.3;
-//    &.first-image {
-//      background-position: -879px -913px;
-//    }
-//    &.facebook {
-//      background-position: -1151px -1186px;
-//    }
-//    &.twitter {
-//      background-position: -881px -1275px;
-//    }
-//    &.in {
-//      background-position: -972px -1275px;
-//    }
-//    &.globus {
-//      background-position: -1241px -1096px;
-//    }
-//    &.be {
-//      background-position: -881px -1008px;
-//    }
-//
-//  }
-//}
-//
-//
