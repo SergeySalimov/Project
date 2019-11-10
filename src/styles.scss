@@ -642,4 +642,121 @@ body {
       }
     }
   }
+  .contact-section-footer {
+    background-color: $additionalFontColor;
+
+    a {
+      color: $mainFontColor;
+      &:hover {
+        text-decoration: none;
+        //box-shadow: 0 0 5px 5px rgba(179, 179, 179, 0.8);
+        //background-color: rgba(179, 179, 179, 0.5);
+      }
+      &:first-child {
+        display: block;
+      }
+    }
+    // Logo block properties
+    .logo {
+      display: block;
+      text-align: center;
+      @media (min-width: map-get($grid-breakpoints, "sm")) {
+        text-align: left;
+      }
+      a {
+        font-size: 30px;
+        min-width: 152px;
+        font-weight: 400;
+        &:hover {
+          color: $mainFontColor;
+        }
+      }
+      span {
+        vertical-align: middle;
+        letter-spacing: $letterSpaceStandart;
+        font-weight: 600;
+      }
+      p {
+        //width: 100%;
+        font-size: $smallFontSizeSm;
+        @media (min-width: map-get($grid-breakpoints, "md")) {
+          font-size: $smallFontSizeMd;
+        }
+
+        font-weight: 300;
+      }
+    }
+    // Get a call block properties
+    .get-a-call {
+      //display: block;
+      text-transform: uppercase;
+      font-size: $mediumFontSize;
+      font-weight: 600;
+      letter-spacing: $letterSpaceStandart;
+      text-align: center;
+      padding-top: 0;
+      vertical-align: middle;
+      @media (min-width: map-get($grid-breakpoints, "sm")) {
+        padding-top: $basePaddingTopSm;
+      }
+      a {
+        min-width: ($mediumFontSize * 11) + $radiusOfPhoneCallingIconSvg + 22px;
+        svg {
+          width: 25px;
+          height: 25px;
+
+          // hover on <a> && <svg>
+          &:hover {
+
+          }
+        }
+        &:hover {
+          svg {
+            box-shadow: 0 0 0 $radiusOfPhoneCallingIconSvg #ffac00;
+            background: $mainFontColor2;
+            border-radius: 50% 50%;
+            fill: #fff;
+            animation: tel .8s ease-in infinite;
+            @keyframes tel {
+              45% {
+                transform: rotate(-0.1turn)
+              }
+              45% {
+                transform: rotate(0.2turn)
+              }
+            }
+          }
+          color: $mainFontColor2;
+        }
+        span {
+          padding-left: $radiusOfPhoneCallingIconSvg - 2;
+        }
+      }
+    }
+    // Contact information block properies
+    .contact-information {
+      display: block;
+      text-align: center;
+
+      @media (min-width: map-get($grid-breakpoints, "sm")) {
+        text-align: end;
+        min-width: 160px;
+      }
+      p {
+        font-size: $smallFontSizeMd+1;
+        margin-top: 8px;
+        margin-bottom: 0;
+      }
+      a {
+        letter-spacing: $letterSpaceStandart - 0.1px;
+        font-weight: bold;
+        font-size: $mediumFontSize;
+        &:hover {
+          color: $mainFontColor2;
+        }
+      }
+    }
+  }
 }
+
+

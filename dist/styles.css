@@ -7699,3 +7699,82 @@ body {
           color: #000; }
           #contact-section .contact-section-main .card .card-body ul li a:hover {
             color: #ffac00; }
+  #contact-section .contact-section-footer {
+    background-color: grey; }
+    #contact-section .contact-section-footer a {
+      color: #000; }
+      #contact-section .contact-section-footer a:hover {
+        text-decoration: none; }
+      #contact-section .contact-section-footer a:first-child {
+        display: block; }
+    #contact-section .contact-section-footer .logo {
+      display: block;
+      text-align: center; }
+      @media (min-width: 576px) {
+        #contact-section .contact-section-footer .logo {
+          text-align: left; } }
+      #contact-section .contact-section-footer .logo a {
+        font-size: 30px;
+        min-width: 152px;
+        font-weight: 400; }
+        #contact-section .contact-section-footer .logo a:hover {
+          color: #000; }
+      #contact-section .contact-section-footer .logo span {
+        vertical-align: middle;
+        letter-spacing: 1.3px;
+        font-weight: 600; }
+      #contact-section .contact-section-footer .logo p {
+        font-size: 9px;
+        font-weight: 300; }
+        @media (min-width: 768px) {
+          #contact-section .contact-section-footer .logo p {
+            font-size: 10px; } }
+    #contact-section .contact-section-footer .get-a-call {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1.3px;
+      text-align: center;
+      padding-top: 0;
+      vertical-align: middle; }
+      @media (min-width: 576px) {
+        #contact-section .contact-section-footer .get-a-call {
+          padding-top: 28px; } }
+      #contact-section .contact-section-footer .get-a-call a {
+        min-width: 186px; }
+        #contact-section .contact-section-footer .get-a-call a svg {
+          width: 25px;
+          height: 25px; }
+        #contact-section .contact-section-footer .get-a-call a:hover {
+          color: #ffac00; }
+          #contact-section .contact-section-footer .get-a-call a:hover svg {
+            box-shadow: 0 0 0 10px #ffac00;
+            background: #ffac00;
+            border-radius: 50% 50%;
+            fill: #fff;
+            animation: tel .8s ease-in infinite; }
+
+@keyframes tel {
+  45% {
+    transform: rotate(-0.1turn); }
+  45% {
+    transform: rotate(0.2turn); } }
+        #contact-section .contact-section-footer .get-a-call a span {
+          padding-left: 8px; }
+    #contact-section .contact-section-footer .contact-information {
+      display: block;
+      text-align: center; }
+      @media (min-width: 576px) {
+        #contact-section .contact-section-footer .contact-information {
+          text-align: end;
+          min-width: 160px; } }
+      #contact-section .contact-section-footer .contact-information p {
+        font-size: 11px;
+        margin-top: 8px;
+        margin-bottom: 0; }
+      #contact-section .contact-section-footer .contact-information a {
+        letter-spacing: 1.2px;
+        font-weight: bold;
+        font-size: 14px; }
+        #contact-section .contact-section-footer .contact-information a:hover {
+          color: #ffac00; }
