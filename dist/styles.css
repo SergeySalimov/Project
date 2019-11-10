@@ -7029,9 +7029,13 @@ body {
   background-size: cover;
   padding: 15px 0;
   color: #000; }
-  @media (min-width: 1500px) {
-    .first-section header #mainNavbar a:nth-child(2) {
-      padding-left: 400px; } }
+  .first-section header #mainNavbar #nav-bar-logo {
+    color: #fff; }
+    @media (min-width: 1500px) {
+      .first-section header #mainNavbar #nav-bar-logo {
+        padding-left: 400px; } }
+    .first-section header #mainNavbar #nav-bar-logo a {
+      border-left: transparent; }
   .first-section header #mainNavbar a:nth-child(1) {
     border-bottom: solid 1px white; }
     @media (min-width: 768px) {

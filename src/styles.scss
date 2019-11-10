@@ -6,6 +6,7 @@ $marginBetweenSectionXs: 15px;
 $marginInsideSectionMd: 35px;
 $marginInsideSectionXs: 10px;
 $mainFontColor: #000;
+$mainFontColorComplement: #fff;
 $mainFontColor2: #ffac00;
 $additionalFontColor: grey;
 $additionalFontColor2: lightgrey;
@@ -130,9 +131,13 @@ body {
   header {
     #mainNavbar {
       // Логотип на навигации
-      a:nth-child(2) {
+      #nav-bar-logo {
         @media (min-width: 1500px) {
           padding-left: 400px;
+        }
+        color: $mainFontColorComplement;
+        a {
+          border-left: transparent;
         }
       }
       // Все остальные элементы
@@ -640,7 +645,6 @@ $videoHeight: 315px;
         }
         .card-body {
 
-
           border-left: solid 1px $mainFontColor;
           p {
             @include pNormStyle ();
@@ -650,7 +654,6 @@ $videoHeight: 315px;
             font-weight: 600;
             color: $mainFontColor2;
           }
-
 
           img {
             width: 100px;
