@@ -1,0 +1,110 @@
+// Mixin для большого размера Шрифта, переменной указываем корректировку с необходимым знаком при необходимости
+@mixin fontSizeResponsiveXsSmMd($adjustment: 0, $xs: $bigFontSizeXs, $sm: $bigFontSizeSm, $md: $bigFontSizeMd) {
+  font-size: $xs + $adjustment;
+  @media (min-width: map-get($grid-breakpoints, "sm")) {
+    font-size: $sm + $adjustment;
+  }
+  @media (min-width: map-get($grid-breakpoints, "md")) {
+    font-size: $md + $adjustment;
+  }
+}
+
+@mixin marginInsideSection($marginInsideSectionAdgustment: 0) {
+  margin-top: $marginInsideSectionXs + $marginInsideSectionAdgustment;
+  @media (min-width: map-get($grid-breakpoints, "sm")) {
+    margin-top: $marginInsideSectionMd + $marginInsideSectionAdgustment;
+  }
+}
+
+@mixin marginBetweenSection() {
+  margin-top: $marginBetweenSectionXs;
+  @media (min-width: map-get($grid-breakpoints, "sm")) {
+    margin-top: $marginBetweenSectionMd;
+  }
+}
+
+@mixin paddingBetweenSection() {
+  padding-top: 30px;
+  @media (min-width: map-get($grid-breakpoints, "md")) {
+    padding-top: 80px;
+  }
+}
+
+@mixin sectionTopStyle() {
+  background-size: cover;
+  @include marginBetweenSection();
+  @include paddingBetweenSection ();
+}
+
+@mixin textOnHeadOfSectionWithImg($fontWeightAdjustment: 0) {
+  span {
+    padding-left: 1px;
+    @media (min-width: map-get($grid-breakpoints, "sm")) {
+      padding-left: $basePadding - 10;
+    }
+    @include fontSizeResponsiveXsSmMd (0, $bigFontSizeXs - 11, $bigFontSizeSm - 12, $bigFontSizeMd - 16);
+    font-weight: 500 + $fontWeightAdjustment;
+    @media (min-width: map-get($grid-breakpoints, "sm")) {
+      font-weight: 300 + $fontWeightAdjustment;
+    }
+  }
+}
+
+@mixin pCoolStyle() {
+  font-weight: 400;
+  b {
+    font-weight: 600;
+  }
+  padding-left: $basePadding;
+  padding-right: $basePadding;
+
+  letter-spacing: $letterSpaceStandart + 0.2;
+  text-align: justify;
+  font-size: $mediumFontSizeXs;
+  @media (min-width: map-get($grid-breakpoints, "lg")) {
+    font-size: $mediumFontSize;
+    padding-top: $basePaddingTopXs;
+  }
+}
+
+@mixin pNormStyle() {
+  font-weight: 100;
+  b {
+    font-weight: 500;
+  }
+  text-align: justify;
+  font-size: $mediumFontSizeSm;
+}
+
+@mixin textOnSectionHead {
+  h2 {
+    @include textOnHeadOfSectionWithImg (100);
+  }
+  p {
+    @include pCoolStyle ();
+  }
+}
+
+@mixin placeholderStyle() {
+  font-size: $mediumFontSize;
+  text-align: center;
+  font-weight: 100;
+  letter-spacing: $letterSpaceStandart;
+}
+
+@mixin videoSizing($scaleVideo: 1) {
+  width: $videoWidth * $scaleVideo;
+  height: $videoHeight * $scaleVideo;
+}
+
+@mixin imgSizing($scaleImg: 1) {
+  width: $imgWidth * $scaleImg;
+  height: $imgHeight * $scaleImg;
+}
+
+@mixin textAlingXsLeftSmCenter() {
+  text-align: left;
+  @media (min-width: map-get($grid-breakpoints, "sm")) {
+    text-align: center;
+  }
+}
