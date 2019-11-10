@@ -1,32 +1,3 @@
-$basePaddingTopXs: 15px;
-$basePaddingTopSm: 28px;
-$basePadding: 25px;
-$marginBetweenSectionMd: 50px;
-$marginBetweenSectionXs: 15px;
-$marginInsideSectionMd: 35px;
-$marginInsideSectionXs: 10px;
-$mainFontColor: #000;
-$mainFontColorComplement: #fff;
-$mainFontColor2: #ffac00;
-$additionalFontColor: grey;
-$additionalFontColor2: lightgrey;
-
-$smallFontSizeMd: 10px;
-$smallFontSizeSm: 9px;
-$bigFontSizeXs: 23px;
-$bigFontSizeSm: 33px;
-$bigFontSizeMd: 45px;
-$mediumFontSize: 14px;
-$mediumFontSizeSm: 12px;
-$mediumFontSizeXs: 10px;
-$letterSpaceStandart: 1.3px;
-$radiusOfPhoneCallingIconSvg: 10px;
-
-// переопределили warning в бутсрапе на свой оранжевый!!
-$warning: $mainFontColor2;
-
-
-
 // Mixin для большого размера Шрифта, переменной указываем корректировку с необходимым знаком при необходимости
 @mixin fontSizeResponsiveXsSmMd($adjustment: 0, $xs: $bigFontSizeXs, $sm: $bigFontSizeSm, $md: $bigFontSizeMd) {
   font-size: $xs + $adjustment;
@@ -145,6 +116,8 @@ $warning: $mainFontColor2;
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // Верстка Mobile First: XS - телефон, SM - планшет - перевернутыЙ телефон, MD - планшет - небоьшой монитор, LG - монитор - широкий экран
+
+@import "variables", "mixins";
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -737,6 +710,16 @@ $imgHeight: 533px;
       color: $mainFontColor;
     }
   }
+}
+
+#contact-section {
+  background: url('../img/question-bg.jpg');
+  @include sectionTopStyle ();
+  .contact-section-header {
+    @include textOnSectionHead ();
+
+  }
+
 }
 
 // media for sm+md
