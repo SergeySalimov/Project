@@ -7701,6 +7701,9 @@ body {
             color: #ffac00; }
   #contact-section .contact-section-footer {
     background-color: grey; }
+    #contact-section .contact-section-footer .rights-reserved {
+      font-size: 12px;
+      opacity: 0.7; }
     #contact-section .contact-section-footer a {
       color: #000; }
       #contact-section .contact-section-footer a:hover {

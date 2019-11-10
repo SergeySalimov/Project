@@ -644,6 +644,10 @@ body {
   }
   .contact-section-footer {
     background-color: $additionalFontColor;
+    .rights-reserved {
+      font-size: $mediumFontSizeSm;
+      opacity: 0.7;
+    }
 
     a {
       color: $mainFontColor;
