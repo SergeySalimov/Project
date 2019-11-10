@@ -7029,8 +7029,32 @@ body {
   background-size: cover;
   padding: 15px 0;
   color: #000; }
-  .first-section header #mainNavbar a:first-of-type {
-    font-size: 16px; }
+  @media (min-width: 1500px) {
+    .first-section header #mainNavbar a:nth-child(2) {
+      padding-left: 400px; } }
+  .first-section header #mainNavbar a:nth-child(1) {
+    border-bottom: solid 1px white; }
+    @media (min-width: 768px) {
+      .first-section header #mainNavbar a:nth-child(1) {
+        border-left: solid 1px white;
+        border-bottom: transparent; } }
+  .first-section header #mainNavbar #first-nav-element {
+    border-left: transparent;
+    border-top: solid 1px white; }
+    @media (min-width: 768px) {
+      .first-section header #mainNavbar #first-nav-element {
+        border-top: transparent; } }
+    @media (min-width: 768px) {
+      .first-section header #mainNavbar #first-nav-element {
+        padding-left: 50px; } }
+    @media (min-width: 992px) {
+      .first-section header #mainNavbar #first-nav-element {
+        padding-left: 200px; } }
+    @media (min-width: 1500px) {
+      .first-section header #mainNavbar #first-nav-element {
+        padding-left: 100px; } }
+  .first-section header #mainNavbar a {
+    font-size: 15px; }
   .first-section header .header-bottom a {
     color: #000; }
     .first-section header .header-bottom a:hover {
@@ -7464,3 +7488,54 @@ body {
     @media (min-width: 576px) {
       #reviews-section .reviews-section-main h2 span {
         font-weight: 400; } }
+  #reviews-section .reviews-section-navigation {
+    margin-top: 15px; }
+    @media (min-width: 576px) {
+      #reviews-section .reviews-section-navigation {
+        margin-top: 50px; } }
+    #reviews-section .reviews-section-navigation .accordion .card {
+      background-color: transparent;
+      border: transparent; }
+      #reviews-section .reviews-section-navigation .accordion .card .card-header h5 button.btn.btn-link:hover {
+        color: #ffac00; }
+      #reviews-section .reviews-section-navigation .accordion .card .card-header h5 button[aria-expanded=true] {
+        color: #000;
+        font-weight: 600; }
+      #reviews-section .reviews-section-navigation .accordion .card .card-header h5 button[aria-expanded=false] {
+        color: grey; }
+      #reviews-section .reviews-section-navigation .accordion .card .card-body {
+        border-left: solid 1px #000; }
+        #reviews-section .reviews-section-navigation .accordion .card .card-body p {
+          font-weight: 100;
+          text-align: justify;
+          font-size: 12px; }
+          #reviews-section .reviews-section-navigation .accordion .card .card-body p b {
+            font-weight: 500; }
+        #reviews-section .reviews-section-navigation .accordion .card .card-body h5 {
+          font-size: 14px;
+          font-weight: 600;
+          color: #ffac00; }
+        #reviews-section .reviews-section-navigation .accordion .card .card-body img {
+          width: 100px;
+          height: 100px; }
+          @media (min-width: 768px) and (max-width: 992px) {
+            #reviews-section .reviews-section-navigation .accordion .card .card-body img {
+              width: 75px;
+              height: 75px; } }
+        #reviews-section .reviews-section-navigation .accordion .card .card-body .video {
+          margin: 5px auto; }
+          #reviews-section .reviews-section-navigation .accordion .card .card-body .video iframe {
+            width: 270px;
+            height: 157.5px; }
+            @media (min-width: 576px) {
+              #reviews-section .reviews-section-navigation .accordion .card .card-body .video iframe {
+                width: 513px;
+                height: 299.25px; } }
+            @media (min-width: 768px) {
+              #reviews-section .reviews-section-navigation .accordion .card .card-body .video iframe {
+                width: 432px;
+                height: 252px; } }
+            @media (min-width: 992px) {
+              #reviews-section .reviews-section-navigation .accordion .card .card-body .video iframe {
+                width: 594px;
+                height: 346.5px; } }

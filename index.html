@@ -16,7 +16,7 @@
 <body>
 <section class="first-section" id="first">
   <header>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark" id="mainNavbar">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mx-md-4 mx-lg-5" id="mainNavbar">
       <button class="navbar-toggler"
               type="button"
               data-toggle="collapse"
@@ -30,13 +30,17 @@
       <a class="navbar-brand" href="#">Навигация</a>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+
+        <ul class="navbar-nav">
           <!--<li class="nav-item active">-->
           <!--<a class="nav-link" href="#second">Home<span class="sr-only">(current)</span></a>-->
           <!--</li>-->
+          <!--<li class="nav-item">-->
+          <!--<a class="nav-link" href="#">       </a>-->
+          <!--</li>-->
 
           <li class="nav-item">
-            <a class="nav-link" href="#second">Ассортимент</a>
+            <a class="nav-link" id="first-nav-element" href="#second">Ассортимент</a>
           </li>
 
           <li class="nav-item">
@@ -44,33 +48,47 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#reviews-section">Отзывы</a>
           </li>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-               data-toggle="dropdown"
-               aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Фото с производства</a>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Контакты</a>
+          </li>
+
+          <!--<li class="nav-item">-->
+          <!--<a class="nav-link" href="#">Link</a>-->
+          <!--</li>-->
+
+
+          <!--<li class="nav-item dropdown">-->
+          <!--<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"-->
+          <!--data-toggle="dropdown"-->
+          <!--aria-haspopup="true" aria-expanded="false">-->
+          <!--Dropdown-->
+          <!--</a>-->
+          <!--<div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+          <!--<a class="dropdown-item" href="#">Action</a>-->
+          <!--<a class="dropdown-item" href="#">Another action</a>-->
+          <!--<div class="dropdown-divider"></div>-->
+          <!--<a class="dropdown-item" href="#">Something else here</a>-->
+          <!--</div>-->
+          <!--</li>-->
 
           <!--<li class="nav-item">-->
           <!--<a class="nav-link disabled" href="#">Disabled</a>-->
           <!--</li>-->
+
+
+          <!--<form class="form-inline my-2 my-lg-0">-->
+          <!--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+          <!--<button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>-->
+
+          <!--</form>-->
         </ul>
-
-        <!--<form class="form-inline my-2 my-lg-0">-->
-        <!--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
-        <!--<button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>-->
-
-        <!--</form>-->
       </div>
     </nav>
     <div class="header-bottom">
@@ -470,7 +488,7 @@
         <div class="card-deck">
           <!--1-->
           <div class="card">
-            <img src="./img/filter/aluminzhaluzi.jpg" class="card-img-top" alt="Алюминиевые жалюзи">
+            <img src="img/cards-img/aluminzhaluzi.jpg" class="card-img-top" alt="Алюминиевые жалюзи">
             <div class="card-body text-center">
               <h5 class="card-title">Алюминиевые жалюзи</h5>
             </div>
@@ -495,7 +513,7 @@
           </div>
           <!--2-->
           <div class="card">
-            <img src="./img/filter/derzhaluzi.png" class="card-img-top" alt="Деревянные жалюзи">
+            <img src="img/cards-img/derzhaluzi.png" class="card-img-top" alt="Деревянные жалюзи">
             <div class="card-body text-center">
               <h5 class="card-title">Деревянные жалюзи</h5>
             </div>
@@ -520,7 +538,7 @@
           </div>
           <!--3-->
           <div class="card">
-            <img src="./img/filter/bambukzhaluzi.jpg" class="card-img-top" alt="Бамбуковые жалюзи">
+            <img src="img/cards-img/bambukzhaluzi.jpg" class="card-img-top" alt="Бамбуковые жалюзи">
             <div class="card-body text-center">
               <h5 class="card-title">Бамбуковые жалюзи</h5>
             </div>
@@ -545,7 +563,7 @@
           </div>
           <!--4-->
           <div class="card">
-            <img src="./img/filter/plastikzhaluzi.jpg" class="card-img-top" alt="Пластиковые жалюзи">
+            <img src="img/cards-img/plastikzhaluzi.jpg" class="card-img-top" alt="Пластиковые жалюзи">
             <div class="card-body text-center">
               <h5 class="card-title">Пластиковые жалюзи</h5>
             </div>
@@ -570,7 +588,7 @@
           </div>
           <!--5-->
           <div class="card">
-            <img src="./img/filter/tkanevyezhaluzi.jpg" class="card-img-top" alt="Тканевые жалюзи">
+            <img src="img/cards-img/tkanevyezhaluzi.jpg" class="card-img-top" alt="Тканевые жалюзи">
             <div class="card-body text-center">
               <h5 class="card-title">Тканевые жалюзи</h5>
             </div>
@@ -595,7 +613,7 @@
           </div>
           <!--6-->
           <div class="card">
-            <img src="./img/filter/zhaluzisfotopechatju.jpg" class="card-img-top" alt="Жалюзи с фотопечатью">
+            <img src="img/cards-img/zhaluzisfotopechatju.jpg" class="card-img-top" alt="Жалюзи с фотопечатью">
             <div class="card-body text-center">
               <h5 class="card-title">Жалюзи с фотопечатью</h5>
             </div>
@@ -620,7 +638,7 @@
           </div>
           <!--7-->
           <div class="card">
-            <img src="./img/filter/multifakturnye.jpg" class="card-img-top" alt="Мультифактурные жалюзи">
+            <img src="img/cards-img/multifakturnye.jpg" class="card-img-top" alt="Мультифактурные жалюзи">
             <div class="card-body text-center">
               <h5 class="card-title">Мультифактурные жалюзи</h5>
             </div>
@@ -645,7 +663,7 @@
           </div>
           <!--8-->
           <div class="card">
-            <img src="./img/filter/japonskieshtory.jpeg" class="card-img-top" alt="Японские шторы">
+            <img src="img/cards-img/japonskieshtory.jpeg" class="card-img-top" alt="Японские шторы">
             <div class="card-body text-center">
               <h5 class="card-title">Японские шторы</h5>
             </div>
@@ -670,7 +688,7 @@
           </div>
           <!--9-->
           <div class="card">
-            <img src="./img/filter/rimskieshtory.jpg" class="card-img-top" alt="Римские шторы">
+            <img src="img/cards-img/rimskieshtory.jpg" class="card-img-top" alt="Римские шторы">
             <div class="card-body text-center">
               <h5 class="card-title">Римские шторы</h5>
             </div>
@@ -695,7 +713,7 @@
           </div>
           <!--10-->
           <div class="card">
-            <img src="./img/filter/plisse.jpg" class="card-img-top" alt="Шторы-Плиссе">
+            <img src="img/cards-img/plisse.jpg" class="card-img-top" alt="Шторы-Плиссе">
             <div class="card-body text-center">
               <h5 class="card-title">Шторы-Плиссе</h5>
             </div>
@@ -720,7 +738,7 @@
           </div>
           <!--11-->
           <div class="card">
-            <img src="./img/filter/svobodnovisjashhierolshtory.jpg" class="card-img-top"
+            <img src="img/cards-img/svobodnovisjashhierolshtory.jpg" class="card-img-top"
                  alt="Свободновисящие рольшторы">
             <div class="card-body text-center">
               <h5 class="card-title">Свободновисящие рольшторы</h5>
@@ -746,7 +764,7 @@
           </div>
           <!--12-->
           <div class="card">
-            <img src="./img/filter/rolshtorykasset.jpg" class="card-img-top" alt="Кассетные рольшторы">
+            <img src="img/cards-img/rolshtorykasset.jpg" class="card-img-top" alt="Кассетные рольшторы">
             <div class="card-body text-center">
               <h5 class="card-title">Кассетные рольшторы</h5>
             </div>
@@ -771,7 +789,7 @@
           </div>
           <!--13-->
           <div class="card">
-            <img src="./img/filter/dennoch.jpg" class="card-img-top" alt="Рольшторы День-Ночь">
+            <img src="img/cards-img/dennoch.jpg" class="card-img-top" alt="Рольшторы День-Ночь">
             <div class="card-body text-center">
               <h5 class="card-title">Рольшторы День-Ночь</h5>
             </div>
@@ -796,7 +814,7 @@
           </div>
           <!--14-->
           <div class="card">
-            <img src="./img/filter/fotopechat.jpg" class="card-img-top" alt="Рольшторы с фотопечатью">
+            <img src="img/cards-img/fotopechat.jpg" class="card-img-top" alt="Рольшторы с фотопечатью">
             <div class="card-body text-center">
               <h5 class="card-title">Рольшторы с фотопечатью</h5>
             </div>
@@ -821,7 +839,7 @@
           </div>
           <!--15-->
           <div class="card">
-            <img src="./img/filter/pult.jpg" class="card-img-top" alt="Рольшторы на пульте управления">
+            <img src="img/cards-img/pult.jpg" class="card-img-top" alt="Рольшторы на пульте управления">
             <div class="card-body text-center">
               <h5 class="card-title">Рольшторы на пульте управления</h5>
             </div>
@@ -854,7 +872,7 @@
         <div class="card-deck">
 
           <div class="card">
-            <img src="./img/filter/svobodnovisjashhierolshtory.jpg" class="card-img-top"
+            <img src="img/cards-img/svobodnovisjashhierolshtory.jpg" class="card-img-top"
                  alt="Свободновисящие рольшторы">
             <div class="card-body text-center">
               <h5 class="card-title">Свободновисящие рольшторы</h5>
@@ -880,7 +898,7 @@
           </div>
 
           <div class="card">
-            <img src="./img/filter/rolshtorykasset.jpg" class="card-img-top" alt="Кассетные рольшторы">
+            <img src="img/cards-img/rolshtorykasset.jpg" class="card-img-top" alt="Кассетные рольшторы">
             <div class="card-body text-center">
               <h5 class="card-title">Кассетные рольшторы</h5>
             </div>
@@ -905,7 +923,7 @@
           </div>
 
           <div class="card">
-            <img src="./img/filter/dennoch.jpg" class="card-img-top" alt="Рольшторы День-Ночь">
+            <img src="img/cards-img/dennoch.jpg" class="card-img-top" alt="Рольшторы День-Ночь">
             <div class="card-body text-center">
               <h5 class="card-title">Рольшторы День-Ночь</h5>
             </div>
@@ -930,7 +948,7 @@
           </div>
 
           <div class="card">
-            <img src="./img/filter/fotopechat.jpg" class="card-img-top" alt="Рольшторы с фотопечатью">
+            <img src="img/cards-img/fotopechat.jpg" class="card-img-top" alt="Рольшторы с фотопечатью">
             <div class="card-body text-center">
               <h5 class="card-title">Рольшторы с фотопечатью</h5>
             </div>
@@ -955,7 +973,7 @@
           </div>
 
           <div class="card">
-            <img src="./img/filter/pult.jpg" class="card-img-top" alt="Рольшторы на пульте управления">
+            <img src="img/cards-img/pult.jpg" class="card-img-top" alt="Рольшторы на пульте управления">
             <div class="card-body text-center">
               <h5 class="card-title">Рольшторы на пульте управления</h5>
             </div>
@@ -988,7 +1006,7 @@
         <div class="card-deck">
 
           <div class="card">
-            <img src="./img/filter/aluminzhaluzi.jpg" class="card-img-top" alt="Алюминиевые жалюзи">
+            <img src="img/cards-img/aluminzhaluzi.jpg" class="card-img-top" alt="Алюминиевые жалюзи">
             <div class="card-body text-center">
               <h5 class="card-title">Алюминиевые жалюзи</h5>
             </div>
@@ -1013,7 +1031,7 @@
           </div>
 
           <div class="card">
-            <img src="./img/filter/derzhaluzi.png" class="card-img-top" alt="Деревянные жалюзи">
+            <img src="img/cards-img/derzhaluzi.png" class="card-img-top" alt="Деревянные жалюзи">
             <div class="card-body text-center">
               <h5 class="card-title">Деревянные жалюзи</h5>
             </div>
@@ -1038,7 +1056,7 @@
           </div>
 
           <div class="card">
-            <img src="./img/filter/bambukzhaluzi.jpg" class="card-img-top" alt="Бамбуковые жалюзи">
+            <img src="img/cards-img/bambukzhaluzi.jpg" class="card-img-top" alt="Бамбуковые жалюзи">
             <div class="card-body text-center">
               <h5 class="card-title">Бамбуковые жалюзи</h5>
             </div>
@@ -1063,7 +1081,7 @@
           </div>
 
           <div class="card">
-            <img src="./img/filter/plastikzhaluzi.jpg" class="card-img-top" alt="Пластиковые жалюзи">
+            <img src="img/cards-img/plastikzhaluzi.jpg" class="card-img-top" alt="Пластиковые жалюзи">
             <div class="card-body text-center">
               <h5 class="card-title">Пластиковые жалюзи</h5>
             </div>
@@ -1096,7 +1114,7 @@
         <div class="card-deck">
 
           <div class="card">
-            <img src="./img/filter/tkanevyezhaluzi.jpg" class="card-img-top" alt="Тканевые жалюзи">
+            <img src="img/cards-img/tkanevyezhaluzi.jpg" class="card-img-top" alt="Тканевые жалюзи">
             <div class="card-body text-center">
               <h5 class="card-title">Тканевые жалюзи</h5>
             </div>
@@ -1121,7 +1139,7 @@
           </div>
 
           <div class="card">
-            <img src="./img/filter/zhaluzisfotopechatju.jpg" class="card-img-top" alt="Жалюзи с фотопечатью">
+            <img src="img/cards-img/zhaluzisfotopechatju.jpg" class="card-img-top" alt="Жалюзи с фотопечатью">
             <div class="card-body text-center">
               <h5 class="card-title">Жалюзи с фотопечатью</h5>
             </div>
@@ -1146,7 +1164,7 @@
           </div>
 
           <div class="card">
-            <img src="./img/filter/multifakturnye.jpg" class="card-img-top" alt="Мультифактурные жалюзи">
+            <img src="img/cards-img/multifakturnye.jpg" class="card-img-top" alt="Мультифактурные жалюзи">
             <div class="card-body text-center">
               <h5 class="card-title">Мультифактурные жалюзи</h5>
             </div>
@@ -1179,7 +1197,7 @@
         <div class="card-deck">
 
           <div class="card">
-            <img src="./img/filter/japonskieshtory.jpeg" class="card-img-top" alt="Японские шторы">
+            <img src="img/cards-img/japonskieshtory.jpeg" class="card-img-top" alt="Японские шторы">
             <div class="card-body text-center">
               <h5 class="card-title">Японские шторы</h5>
             </div>
@@ -1204,7 +1222,7 @@
           </div>
 
           <div class="card">
-            <img src="./img/filter/rimskieshtory.jpg" class="card-img-top" alt="Римские шторы">
+            <img src="img/cards-img/rimskieshtory.jpg" class="card-img-top" alt="Римские шторы">
             <div class="card-body text-center">
               <h5 class="card-title">Римские шторы</h5>
             </div>
@@ -1229,7 +1247,7 @@
           </div>
 
           <div class="card">
-            <img src="./img/filter/plisse.jpg" class="card-img-top" alt="Шторы-Плиссе">
+            <img src="img/cards-img/plisse.jpg" class="card-img-top" alt="Шторы-Плиссе">
             <div class="card-body text-center">
               <h5 class="card-title">Шторы-Плиссе</h5>
             </div>
@@ -1289,32 +1307,28 @@
         <a class="list-group-item list-group-item-action active"
            id="list-montagniki-list"
            data-toggle="list"
-           href="#list-montagniki" role="tab"
-           aria-controls="home">Монтажники</a>
+           href="#list-montagniki"
+           role="tab">Монтажники</a>
         <a class="list-group-item list-group-item-action"
            id="list-instrument-list"
            data-toggle="list"
            href="#list-instrument"
-           role="tab"
-           aria-controls="profile">Инструмент</a>
+           role="tab">Инструмент</a>
         <a class="list-group-item list-group-item-action"
            id="list-production-list"
            data-toggle="list"
            href="#list-production"
-           role="tab"
-           aria-controls="messages">Производство</a>
+           role="tab">Производство</a>
         <a class="list-group-item list-group-item-action"
            id="list-materials-list"
            data-toggle="list"
            href="#list-materials"
-           role="tab"
-           aria-controls="settings">Материалы</a>
+           role="tab">Материалы</a>
         <a class="list-group-item list-group-item-action"
            id="list-service-list"
            data-toggle="list"
            href="#list-service"
-           role="tab"
-           aria-controls="settings">Сервис</a>
+           role="tab">Сервис</a>
       </div>
     </div>
     <div class="col-8 col-md-9">
@@ -1451,6 +1465,7 @@
 <section id="reviews-section">
 
   <div class="container reviews-section-main">
+
     <div class="row">
       <div class="col-xs-12">
         <h2>
@@ -1458,12 +1473,240 @@
           <span>Отзывы наших клиентов</span>
         </h2>
       </div>
+    </div>
 
+    <div class="row reviews-section-navigation">
+
+      <div class="col-xs-12">
+
+        <div class="accordion" id="reviews-accordion">
+          <!--Иван, Минск-->
+          <div class="card">
+            <div class="card-header" id="headingOne">
+
+              <h5 class="mb-0">
+                <button class="btn btn-link btn-block text-left"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne">
+                  Иван, Минск
+                </button>
+              </h5>
+
+            </div>
+            <!--Иван, Минск date-->
+            <div id="collapseOne"
+                 class="collapse show"
+                 aria-labelledby="headingOne"
+                 data-parent="#reviews-accordion">
+              <div class="card-body row">
+
+                <div class="col-sm-12 col-md-4">
+
+                  <div class="card mb-3">
+                    <div class="row no-gutters">
+                      <div class="col-lg-5">
+                        <img src="img/avatar1.jpg" class="card-img" alt="Ivan-Minsk">
+                      </div>
+                      <div class="col-lg-7">
+                        <div class="card-body">
+                          <p class="card-text">Очень понравились своим подходом! Выбирали жалюзи на 3 окна, получили
+                            очень хорошую консультацию, хорошую скидку. Заказ был готов уже на второй день. Все очень
+                            понравилось. Смело рекомендую Jaluzi5!</p>
+                          <h5 class="card-title">Иван, Минск</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-sm-12 col-md-8">
+                  <div class="video" align="center">
+                    <iframe src="https://www.youtube.com/embed/--GnK8XkrSE"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <!--Павел, Гродно-->
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo">
+                  Павел, Гродно
+                </button>
+              </h5>
+            </div>
+            <!--Павел, Гродно, date-->
+            <div id="collapseTwo"
+                 class="collapse"
+                 aria-labelledby="headingTwo"
+                 data-parent="#reviews-accordion">
+              <div class="card-body row">
+
+                <div class="col-sm-12 col-md-4">
+
+                  <div class="card mb-3">
+                    <div class="row no-gutters">
+                      <div class="col-lg-5">
+                        <img src="img/avatar2.jpg" class="card-img" alt="Pavel-Grodno">
+                      </div>
+                      <div class="col-lg-7">
+                        <div class="card-body">
+                          <p class="card-text">Ребята предложили мне на балкон шторы День-Ночь и подобрали цвет под
+                            стены балкона. Очень мне пришлись по нраву. Приятно наблюдать, как это все выглядит теперь.
+                            Спасибо!</p>
+                          <h5 class="card-title">Павел, Гродно</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-sm-12 col-md-8">
+                  <div class="video" align="center">
+                    <iframe src="https://www.youtube.com/embed/zfs0iGhMDF4"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <!--Александр, Минск-->
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree">
+                  Александр, Минск
+                </button>
+              </h5>
+            </div>
+            <!--Александр, Минск, date-->
+            <div id="collapseThree"
+                 class="collapse"
+                 aria-labelledby="headingThree"
+                 data-parent="#reviews-accordion">
+              <div class="card-body row">
+
+                <div class="col-sm-12 col-md-4">
+
+                  <div class="card mb-3">
+                    <div class="row no-gutters">
+                      <div class="col-lg-5">
+                        <img src="img/avatar3.jpg" class="card-img" alt="Alexandr-Minsk">
+                      </div>
+                      <div class="col-lg-7">
+                        <div class="card-body">
+                          <p class="card-text">Просто потрясающе, очень доволен ребятами! Было очень сложно найти
+                            компанию, которая сможет взяться за мой заказ из-за выступающей балки. Ребята без проблем
+                            взялись за заказ. В оговоренное время приехали, померяли все. Сделали все за пару дней,
+                            привезли и установили. Буду всем вас рекомендовать!</p>
+                          <h5 class="card-title">Александр, Минск</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-sm-12 col-md-8">
+                  <div class="video" align="center">
+                    <iframe src="https://www.youtube.com/embed/BPG41fJCbOg"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <!--Дмитрий, Минск-->
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h5 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour">
+                  Дмитрий, Минск
+                </button>
+              </h5>
+            </div>
+            <!--Дмитрий, Минск, date-->
+            <div id="collapseFour"
+                 class="collapse"
+                 aria-labelledby="headingFour"
+                 data-parent="#reviews-accordion">
+              <div class="card-body row">
+
+                <div class="col-sm-12 col-md-4">
+
+                  <div class="card mb-3">
+                    <div class="row no-gutters">
+                      <div class="col-lg-5">
+                        <img src="img/avatar4.jpg" class="card-img" alt="Dmitrij-Minsk">
+                      </div>
+                      <div class="col-lg-7">
+                        <div class="card-body">
+                          <p class="card-text">Обращаюсь не в первый раз. Год назад заказывал рольшторы домой. Теперь
+                            понадобились вертикальные жалюзи в офис. От оформления заказа до монтажа - все сделали очень
+                            оперативно. Спасибо монтажнику Илье, который все сделал очень аккуратно и без мусора.
+                            Спасибо!</p>
+                          <h5 class="card-title">Дмитрий, Минск</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-sm-12 col-md-8">
+                  <div class="video" align="center">
+                    <iframe src="https://www.youtube.com/embed/YbomHa9wVFQ"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+
+                    </iframe>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
 
     </div>
   </div>
-
-
 
 
 </section>

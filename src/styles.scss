@@ -1,5 +1,5 @@
-$basePaddingTop: 15px;
-$basePaddingTopSmAndMd: 28px;
+$basePaddingTopXs: 15px;
+$basePaddingTopSm: 28px;
 $basePadding: 25px;
 $marginBetweenSectionMd: 50px;
 $marginBetweenSectionXs: 15px;
@@ -7,6 +7,8 @@ $marginInsideSectionMd: 35px;
 $marginInsideSectionXs: 10px;
 $mainFontColor: #000;
 $mainFontColor2: #ffac00;
+$additionalFontColor: grey;
+$additionalFontColor2: lightgrey;
 
 $smallFontSizeMd: 10px;
 $smallFontSizeSm: 9px;
@@ -47,7 +49,7 @@ $warning: $mainFontColor2;
   }
 }
 
-@mixin paddingBetweenSection () {
+@mixin paddingBetweenSection() {
   padding-top: 30px;
   @media (min-width: map-get($grid-breakpoints, "md")) {
     padding-top: 80px;
@@ -81,8 +83,17 @@ $warning: $mainFontColor2;
   font-size: $mediumFontSizeXs;
   @media (min-width: map-get($grid-breakpoints, "lg")) {
     font-size: $mediumFontSize;
-    padding-top: $basePaddingTop;
+    padding-top: $basePaddingTopXs;
   }
+}
+
+@mixin pNormStyle() {
+  font-weight: 100;
+  b {
+    font-weight: 500;
+  }
+  text-align: justify;
+  font-size: $mediumFontSizeSm;
 }
 
 @mixin placeholderStyle() {
@@ -92,13 +103,18 @@ $warning: $mainFontColor2;
   letter-spacing: $letterSpaceStandart;
 }
 
+@mixin videoSizing($scaleVideo: 1) {
+  width: $videoWidth * $scaleVideo;
+  height: $videoHeight * $scaleVideo;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap');
 
 // Custom.scss
 // Option A: Include all of Bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-// Верстка Mobile First: XS - телефон, SM - планшет - перевернуты телефон, MD - монитор, LG - широкий экран
+// Верстка Mobile First: XS - телефон, SM - планшет - перевернутыЙ телефон, MD - планшет - небоьшой монитор, LG - монитор - широкий экран
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -108,15 +124,48 @@ body {
   // Common properties
   background: url('../img/header-bg.jpg');
   background-size: cover;
-  padding: $basePaddingTop 0;
+  padding: $basePaddingTopXs 0;
   color: $mainFontColor;
 
   header {
     #mainNavbar {
-      a {
-        &:first-of-type {
-          font-size: $mediumFontSize + 2;
+      // Логотип на навигации
+      a:nth-child(2) {
+        @media (min-width: 1500px) {
+          padding-left: 400px;
         }
+      }
+      // Все остальные элементы
+      a:nth-child(1) {
+
+        border-bottom: solid 1px white;
+        @media (min-width: map-get($grid-breakpoints, "md")) {
+          border-left: solid 1px white;
+          border-bottom: transparent;
+        }
+
+      }
+      // Первый элемент списка
+      #first-nav-element {
+        border-left: transparent;
+        border-top: solid 1px white;
+        @media (min-width: map-get($grid-breakpoints, "md")) {
+          border-top: transparent;
+        }
+
+        @media (min-width: map-get($grid-breakpoints, "md")) {
+          padding-left: 50px;
+        }
+        @media (min-width: map-get($grid-breakpoints, "lg")) {
+          padding-left: 200px;
+        }
+        @media (min-width: 1500px) {
+          padding-left: 100px;
+        }
+      }
+      a {
+        font-size: $mediumFontSize + 1;
+
       }
     }
     // properties for all <a> in header-bottom
@@ -173,7 +222,7 @@ body {
         padding-top: 0;
         vertical-align: middle;
         @media (min-width: map-get($grid-breakpoints, "sm")) {
-          padding-top: $basePaddingTopSmAndMd;
+          padding-top: $basePaddingTopSm;
         }
         a {
           min-width: ($mediumFontSize * 11) + $radiusOfPhoneCallingIconSvg + 22px;
@@ -237,7 +286,7 @@ body {
   main {
     padding-top: 3px;
     @media (min-width: map-get($grid-breakpoints, "sm")) {
-      padding-top: $basePaddingTopSmAndMd;
+      padding-top: $basePaddingTopSm;
     }
     h1 {
       font-weight: 100;
@@ -283,7 +332,7 @@ body {
     .header-section-form {
       padding: 5px 5px;
       @media (min-width: map-get($grid-breakpoints, "sm")) {
-        padding: $basePaddingTop $basePadding;
+        padding: $basePaddingTopXs $basePadding;
       }
       text-align: center;
       min-width: 270px;
@@ -398,7 +447,7 @@ $cardWidthMd: 250px;
           & + span {
             font-size: $mediumFontSizeSm;
             text-transform: uppercase;
-            color: grey;
+            color: $additionalFontColor;
             padding-top: 15px;
           }
         }
@@ -410,7 +459,7 @@ $cardWidthMd: 250px;
             font-weight: 600;
             padding-top: 20px;
             line-height: 140%;
-            color: lightgrey;
+            color: $additionalFontColor2;
           }
         }
       }
@@ -519,7 +568,7 @@ $cardWidthMd: 250px;
         @include fontSizeResponsiveXsSmMd(1, $mediumFontSizeXs, $mediumFontSizeSm, $mediumFontSize);
         background-color: transparent;
         border: transparent;
-        color: grey;
+        color: $additionalFontColor;
         font-weight: 400;
       }
     }
@@ -550,6 +599,9 @@ $cardWidthMd: 250px;
 
 }
 
+$videoWidth: 540px;
+$videoHeight: 315px;
+
 #reviews-section {
   background: url('../img/reviews-bg.png');
   background-size: cover;
@@ -559,6 +611,75 @@ $cardWidthMd: 250px;
   .reviews-section-main {
     h2 {
       @include textOnHeadOfSectionWithImg (100);
+    }
+  }
+  .reviews-section-navigation {
+    @include marginBetweenSection;
+
+    .accordion {
+      .card {
+        background-color: transparent;
+        border: transparent;
+
+        .card-header {
+
+          h5 {
+            button {
+              &.btn.btn-link:hover {
+                color: $mainFontColor2;
+              }
+              &[aria-expanded=true] {
+                color: $mainFontColor;
+                font-weight: 600;
+              }
+              &[aria-expanded=false] {
+                color: $additionalFontColor;
+              }
+            }
+          }
+        }
+        .card-body {
+
+
+          border-left: solid 1px $mainFontColor;
+          p {
+            @include pNormStyle ();
+          }
+          h5 {
+            font-size: $mediumFontSize;
+            font-weight: 600;
+            color: $mainFontColor2;
+          }
+
+
+          img {
+            width: 100px;
+            height: 100px;
+            @media (min-width: map-get($grid-breakpoints, "md")) and (max-width: map-get($grid-breakpoints, "lg")) {
+              width: 75px;
+              height: 75px;
+            }
+
+          }
+
+          .video {
+            margin: 5px auto;
+            iframe {
+              @include videoSizing(0.5);
+              @media (min-width: map-get($grid-breakpoints, "sm")) {
+                @include videoSizing(0.95);
+              }
+              @media (min-width: map-get($grid-breakpoints, "md")) {
+                @include videoSizing(0.8);
+              }
+              @media (min-width: map-get($grid-breakpoints, "lg")) {
+                @include videoSizing(1.1);
+              }
+            }
+          }
+        }
+      }
+
     }
   }
 }
