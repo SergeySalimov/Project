@@ -11,6 +11,7 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
 .first-section {
   // Common properties
   background: url('../img/header-bg.jpg');
@@ -301,6 +302,7 @@ body {
     }
   }
 }
+
 .second-section {
   background: url('../img/filter-bg.jpg');
   background-size: cover;
@@ -433,6 +435,7 @@ body {
     }
   }
 }
+
 #quality-section {
   background: url('../img/quality-bg.jpg');
   @include sectionTopStyle ();
@@ -484,6 +487,7 @@ body {
   }
 
 }
+
 #reviews-section {
   background: url('../img/production-right.png');
   @include sectionTopStyle ();
@@ -554,6 +558,7 @@ body {
     }
   }
 }
+
 #production-photo-section {
   //background-image: url('../img/production-left.png'), url('../img/production-right.png');
   //background-position: left bottom, right top;
@@ -577,6 +582,7 @@ body {
     }
   }
 }
+
 #contact-section {
   background: url('../img/question-bg.jpg');
   @include sectionTopStyle ();
@@ -649,7 +655,7 @@ body {
           transition: color 0.25s;
           &:hover {
             color: $mainFontColorComplement;
-            transform: scale(1.2,1.2);
+            transform: scale(1.2, 1.2);
           }
         }
       }
@@ -772,6 +778,23 @@ body {
         }
       }
     }
+  }
+}
+
+#button-up {
+  font-size: $buttonUpSize;
+  font-weigh: 600;
+  background-color: $additionalFontColor2;
+  border: solid 1.5px $additionalFontColor;
+  border-radius: 50% 50%;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  transition: opacity 0.5s ;
+  &:hover {
+    background-color: $mainFontColor2;
+    color: $mainFontColorComplement;
+    font-weigh: 800;
   }
 }
 

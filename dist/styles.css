@@ -7794,3 +7794,18 @@ body {
         font-size: 14px; }
         #contact-section .contact-section-footer .contact-information a:hover {
           color: #ffac00; }
+
+#button-up {
+  font-size: 18px;
+  font-weigh: 600;
+  background-color: lightgrey;
+  border: solid 1.5px grey;
+  border-radius: 50% 50%;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  transition: opacity 0.5s; }
+  #button-up:hover {
+    background-color: #ffac00;
+    color: #fff;
+    font-weigh: 800; }
