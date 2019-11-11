@@ -173,8 +173,8 @@
           <div class="header-section-form float-sm-right">
             <h3>Рассчитайте цену<br/>за 5 минут</h3>
             <h5>Назовем честную цену по телефону, которая не поменяется при замере</h5>
-            <form>
-              <div class="form-row text-center">
+            <form action="#">
+              <div class="form-row text-center" id="calculate-price">
                 <div class="form-group col-12">
                   <select class="custom-select mr-sm-2">
                     <option selected disabled>выберите тип изделия</option>
@@ -223,6 +223,7 @@
                          title="Введите ваш телефон, формат +375 XX XXXXXXX"
                          size="30"
                          name="phone"
+
                          placeholder="ваш телефон"
                          autocomplete="on"
                          autofocus
@@ -232,7 +233,7 @@
                   <small id="phoneHelp" class="form-text text-muted">формат +375 XX XXXXXXX</small>
                 </div>
                 <div class="form-group offset-2 col-8 offset-2">
-                  <button type="button" class="btn btn-warning btn-block">Рассчитать цену</button>
+                  <button type="submit" class="btn btn-warning btn-block">Рассчитать цену</button>
                 </div>
 
 

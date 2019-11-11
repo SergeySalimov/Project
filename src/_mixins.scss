@@ -113,3 +113,8 @@
   width: $mapWidth * $scaleMap;
   height: $mapHeight * $scaleMap;
 }
+
+@mixin boxShadowStandart () {
+  box-shadow: 2px 3px 8px 0px $mainFontColor;
+}
+
