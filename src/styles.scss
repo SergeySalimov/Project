@@ -295,6 +295,7 @@ body {
           color: white;
           letter-spacing: 1.1px;
           border-radius: 20px;
+          @include boxShadowStandart ();
         }
       }
     }

@@ -7256,7 +7256,8 @@ body {
           font-weight: 400;
           color: white;
           letter-spacing: 1.1px;
-          border-radius: 20px; }
+          border-radius: 20px;
+          box-shadow: 2px 3px 8px 0px #000; }
 
 .second-section {
   background: url("../img/filter-bg.jpg");
