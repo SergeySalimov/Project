@@ -12,6 +12,54 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+#mainNavbar {
+
+  // Логотип на навигации
+  #nav-bar-logo {
+    @media (min-width: 1500px) {
+      padding-left: 400px;
+    }
+    color: $mainFontColorComplement;
+    a {
+      border-left: transparent;
+    }
+  }
+  // Все остальные элементы
+  a:nth-child(1) {
+
+    border-bottom: solid 1px white;
+    @media (min-width: map-get($grid-breakpoints, "md")) {
+      border-left: solid 1px white;
+      border-bottom: transparent;
+    }
+
+  }
+  // Первый элемент списка
+  #first-nav-element {
+
+    border-left: transparent;
+    //border-top: solid 1px white;
+    @media (min-width: map-get($grid-breakpoints, "md")) {
+      border-top: transparent;
+      border-left: solid 1px white;
+    }
+
+    //@media (min-width: map-get($grid-breakpoints, "md")) {
+    //  padding-left: 50px;
+    //}
+    //@media (min-width: map-get($grid-breakpoints, "lg")) {
+    //  padding-left: 200px;
+    //}
+    //@media (min-width: 1500px) {
+    //  padding-left: 100px;
+    //}
+  }
+  a {
+    font-size: $mediumFontSize + 1;
+
+  }
+}
+
 .first-section {
   // Common properties
   background: url('../img/header-bg.jpg');
@@ -20,50 +68,7 @@ body {
   color: $mainFontColor;
 
   header {
-    #mainNavbar {
-      // Логотип на навигации
-      #nav-bar-logo {
-        @media (min-width: 1500px) {
-          padding-left: 400px;
-        }
-        color: $mainFontColorComplement;
-        a {
-          border-left: transparent;
-        }
-      }
-      // Все остальные элементы
-      a:nth-child(1) {
 
-        border-bottom: solid 1px white;
-        @media (min-width: map-get($grid-breakpoints, "md")) {
-          border-left: solid 1px white;
-          border-bottom: transparent;
-        }
-
-      }
-      // Первый элемент списка
-      #first-nav-element {
-        border-left: transparent;
-        //border-top: solid 1px white;
-        @media (min-width: map-get($grid-breakpoints, "md")) {
-          border-top: transparent;
-        }
-
-        @media (min-width: map-get($grid-breakpoints, "md")) {
-          padding-left: 50px;
-        }
-        @media (min-width: map-get($grid-breakpoints, "lg")) {
-          padding-left: 200px;
-        }
-        @media (min-width: 1500px) {
-          padding-left: 100px;
-        }
-      }
-      a {
-        font-size: $mediumFontSize + 1;
-
-      }
-    }
     // properties for all <a> in header-bottom
     .header-bottom {
       a {

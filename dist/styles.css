@@ -7024,40 +7024,36 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   font-family: 'Roboto', sans-serif; }
 
+#mainNavbar #nav-bar-logo {
+  color: #fff; }
+  @media (min-width: 1500px) {
+    #mainNavbar #nav-bar-logo {
+      padding-left: 400px; } }
+  #mainNavbar #nav-bar-logo a {
+    border-left: transparent; }
+
+#mainNavbar a:nth-child(1) {
+  border-bottom: solid 1px white; }
+  @media (min-width: 768px) {
+    #mainNavbar a:nth-child(1) {
+      border-left: solid 1px white;
+      border-bottom: transparent; } }
+
+#mainNavbar #first-nav-element {
+  border-left: transparent; }
+  @media (min-width: 768px) {
+    #mainNavbar #first-nav-element {
+      border-top: transparent;
+      border-left: solid 1px white; } }
+
+#mainNavbar a {
+  font-size: 15px; }
+
 .first-section {
   background: url("../img/header-bg.jpg");
   background-size: cover;
   padding: 15px 0;
   color: #000; }
-  .first-section header #mainNavbar #nav-bar-logo {
-    color: #fff; }
-    @media (min-width: 1500px) {
-      .first-section header #mainNavbar #nav-bar-logo {
-        padding-left: 400px; } }
-    .first-section header #mainNavbar #nav-bar-logo a {
-      border-left: transparent; }
-  .first-section header #mainNavbar a:nth-child(1) {
-    border-bottom: solid 1px white; }
-    @media (min-width: 768px) {
-      .first-section header #mainNavbar a:nth-child(1) {
-        border-left: solid 1px white;
-        border-bottom: transparent; } }
-  .first-section header #mainNavbar #first-nav-element {
-    border-left: transparent; }
-    @media (min-width: 768px) {
-      .first-section header #mainNavbar #first-nav-element {
-        border-top: transparent; } }
-    @media (min-width: 768px) {
-      .first-section header #mainNavbar #first-nav-element {
-        padding-left: 50px; } }
-    @media (min-width: 992px) {
-      .first-section header #mainNavbar #first-nav-element {
-        padding-left: 200px; } }
-    @media (min-width: 1500px) {
-      .first-section header #mainNavbar #first-nav-element {
-        padding-left: 100px; } }
-  .first-section header #mainNavbar a {
-    font-size: 15px; }
   .first-section header .header-bottom a {
     color: #000; }
     .first-section header .header-bottom a:hover {
