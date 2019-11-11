@@ -9,17 +9,14 @@ window.addEventListener('scroll', () => {
 });
 
 buttonUp.addEventListener('click', () => {
-  let currentScrollY = window.scrollY;
-  // seconds of scrolling
-  let timeOfScrolling = 1.5;
-  // 60 frames per second
-  let stepOfJump = Math.round(currentScrollY / (60 * timeOfScrolling));
-  intervalId = setInterval( ()=> {
-    window.scrollTo(0,currentScrollY);
-    currentScrollY -= stepOfJump;
-    if (currentScrollY < stepOfJump) {
+  let topScroll = window.scrollY;
+  let iteration = Math.round(topScroll / 60);
+  intervalId = setInterval(() => {
+    window.scrollTo(0, topScroll);
+    topScroll -= iteration;
+    if (topScroll < iteration) {
       window.scrollTo(0, 0);
-      clearInterval(intervalId)
+      clearInterval(intervalId);
     }
   }, 1000 / 60)
 });
