@@ -638,8 +638,25 @@ body {
   }
   .contact-section-footer {
     background-color: $additionalFontColor;
+    padding-top: $basePadding - 5;
+    .social-block {
+      ul {
+        list-style: none;
+        li {
+          display: inline-block;
+          font-size: $bigFontSizeXs - 4;
+          transition: color 0.25s;
+          &:hover {
+            color: $mainFontColorComplement;
+            transform: scale(1.2,1.2);
+          }
+        }
+      }
+
+      display: inline-block;
+    }
     .rights-reserved {
-      font-size: $mediumFontSizeSm;
+      font-size: $mediumFontSizeXs;
       opacity: 0.7;
     }
 

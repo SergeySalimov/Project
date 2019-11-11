@@ -7700,9 +7700,21 @@ body {
           #contact-section .contact-section-main .card .card-body ul li a:hover {
             color: #ffac00; }
   #contact-section .contact-section-footer {
-    background-color: grey; }
+    background-color: grey;
+    padding-top: 20px; }
+    #contact-section .contact-section-footer .social-block {
+      display: inline-block; }
+      #contact-section .contact-section-footer .social-block ul {
+        list-style: none; }
+        #contact-section .contact-section-footer .social-block ul li {
+          display: inline-block;
+          font-size: 19px;
+          transition: color 0.25s; }
+          #contact-section .contact-section-footer .social-block ul li:hover {
+            color: #fff;
+            transform: scale(1.2, 1.2); }
     #contact-section .contact-section-footer .rights-reserved {
-      font-size: 12px;
+      font-size: 10px;
       opacity: 0.7; }
     #contact-section .contact-section-footer a {
       color: #000; }
