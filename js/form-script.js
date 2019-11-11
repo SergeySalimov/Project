@@ -1,4 +1,4 @@
-// document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
 const form = document.getElementById('calculate-price');
 const userInput = {};
 console.log(form);
@@ -12,10 +12,25 @@ form.addEventListener('submit', (event) => {
   userInput.phoneNumber = form[4].value;
   console.log(userInput);
   form.reset();
-
-
+  addSuccessMsg();
   event.preventDefault();
 });
 
+function addSuccessMsg() {
+  let el = document.createElement('div');
+  el.className = 'col-12 alert alert-success text-left';
+  el.style.fontSize = '12px';
+  el.style.fontWeight = '300';
+  el.innerHTML = 'Спасибо! Ваши данные были приняты на обработку. Мы с вами свяжемся в ближайшее время';
 
-// });
+  form.append(el);
+  removeElement(el, 4000);
+
+}
+
+function removeElement(elem, timeout = 3000) {
+  setTimeout(() => {
+    elem.remove();
+      }, timeout)
+}
+});
