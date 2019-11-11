@@ -7024,11 +7024,15 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   font-family: 'Roboto', sans-serif; }
 
+@media (min-width: 768px) {
+  #mainNavbar .abs-center-x {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%); } }
+
 #mainNavbar #nav-bar-logo {
   color: #fff; }
-  @media (min-width: 1500px) {
-    #mainNavbar #nav-bar-logo {
-      padding-left: 400px; } }
   #mainNavbar #nav-bar-logo a {
     border-left: transparent; }
 

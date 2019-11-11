@@ -13,12 +13,22 @@ body {
 }
 
 #mainNavbar {
+  @media (min-width: map-get($grid-breakpoints, "md")) {
+    .abs-center-x {
+      position: absolute;
+      top: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+
 
   // Логотип на навигации
   #nav-bar-logo {
-    @media (min-width: 1500px) {
-      padding-left: 400px;
-    }
+    //@media (min-width: 1500px) {
+    //  padding-left: 400px;
+    //}
     color: $mainFontColorComplement;
     a {
       border-left: transparent;
