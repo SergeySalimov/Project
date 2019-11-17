@@ -401,6 +401,7 @@ body {
       margin-bottom: 10px;
       .tab-pane {
         .card {
+
           .form-group {
             ::placeholder {
               @include placeholderStyle ();
@@ -414,7 +415,11 @@ body {
           margin: 3px auto;
 
           @media (min-width: map-get($grid-breakpoints, "md")) {
-            margin: 6px 15px;
+            margin: 6px 2px;
+            // выравнивание по центру
+            //margin: 6px auto;
+
+
           }
 
           max-width: $cardWidthMaxXs;
